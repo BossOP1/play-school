@@ -116,7 +116,7 @@
                     </ul>
                 </nav>
                 <div class="flex items-center gap-4">
-                    <a href="#" class="bg-brandOrange text-white px-8 py-3.5 rounded-full font-bold shadow-md hover:bg-orange-500 transition shadow-brandOrange/30 text-sm">
+                    <a href="contact.php" class="bg-brandOrange text-white px-8 py-3.5 rounded-full font-bold shadow-md hover:bg-orange-500 transition shadow-brandOrange/30 text-sm">
                         Book A Visit <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>

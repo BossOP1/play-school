@@ -48,7 +48,7 @@
                     <li><a href="index2.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Home</a></li>
                     <li><a href="about.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> About Us</a></li>
                     <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Programs</a></li>
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Contact Us</a></li>
+                    <li><a href="contact.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Contact Us</a></li>
                 </ul>
             </div>
 
