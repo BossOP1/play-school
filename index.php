@@ -234,11 +234,11 @@
                 <div class="bg-accentTeal rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:rotate-12 transition-transform">
-                        <i class="fa-solid fa-book"></i>
+                        <i class="fa-solid fa-baby"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">English Class</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">4 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-8">Foundational language skills</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
+                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">1.5 - 2.5 years</p>
+                    <p class="text-sm opacity-90 mb-8">Gentle introduction to structure</p>
                     <a href="#" class="inline-flex w-12 h-12 bg-white text-accentTeal rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -247,11 +247,11 @@
                 <div class="bg-primary rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:-rotate-12 transition-transform">
-                        <i class="fa-solid fa-flask"></i>
+                        <i class="fa-solid fa-child"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Chemistry Class</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">5 - 7 years</p>
-                    <p class="text-sm opacity-90 mb-8">Fun with safe science experiments</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
+                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">2.5 - 3.5 years</p>
+                    <p class="text-sm opacity-90 mb-8">Building language & motor skills</p>
                     <a href="#" class="inline-flex w-12 h-12 bg-white text-primary rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -260,11 +260,11 @@
                 <div class="bg-softBlue rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:rotate-12 transition-transform">
-                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-pencil"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Drawing Class</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">3 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-8">Express creative imagination</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
+                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">3.5 - 4.5 years</p>
+                    <p class="text-sm opacity-90 mb-8">Letters, numbers & creativity</p>
                     <a href="#" class="inline-flex w-12 h-12 bg-white text-softBlue rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -273,11 +273,11 @@
                 <div class="bg-accentRed rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
                     <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:-rotate-12 transition-transform">
-                        <i class="fa-solid fa-cube"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Preschool</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">2 - 4 years</p>
-                    <p class="text-sm opacity-90 mb-8">Early childhood development</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
+                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">4.5 - 6 years</p>
+                    <p class="text-sm opacity-90 mb-8">School readiness & preparation</p>
                     <a href="#" class="inline-flex w-12 h-12 bg-white text-accentRed rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -451,9 +451,10 @@
                             <div class="mb-6">
                                 <select class="w-full px-6 py-4 bg-cream border-2 border-transparent rounded-2xl focus:outline-none focus:border-primary transition-colors text-textLight appearance-none">
                                     <option value="" disabled selected>Select Program of Interest</option>
-                                    <option value="preschool">Preschool (2-4 Yrs)</option>
-                                    <option value="nursery">Junior KG (4-5 Yrs)</option>
-                                    <option value="playgroup">Senior KG (5-6 Yrs)</option>
+                                    <option value="pre-nursery">Pre Nursery (1.5 - 2.5 Yrs)</option>
+                                    <option value="nursery">Nursery (2.5 - 3.5 Yrs)</option>
+                                    <option value="lkg">LKG (3.5 - 4.5 Yrs)</option>
+                                    <option value="ukg">UKG (4.5 - 6 Yrs)</option>
                                 </select>
                             </div>
                             <div class="mb-8">
@@ -463,6 +464,63 @@
                                 Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
                             </button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== BLOG SECTION ===== -->
+    <section class="py-16 bg-white relative overflow-hidden">
+        <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandOrange">The Foundation</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Blog Card 1 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in young children.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> March 5, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandOrange/10 text-brandOrange text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why Nursery Rhymes Are More Than Just Fun</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> February 20, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 3 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for Preschool</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your toddler is ready? Look for these five readiness signs before making enrolment decision.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> January 15, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

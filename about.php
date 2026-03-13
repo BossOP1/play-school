@@ -327,10 +327,10 @@ include 'header.php';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <?php
                 $programs = [
-                    ['color'=>'bg-brandTeal','icon'=>'fa-baby','title'=>'Playgroup','age'=>'1.5 – 2.5 yrs','desc'=>'A gentle introduction to structured environment through sensory play, songs, and stories.','activities'=>['Sensory play','Music & rhymes','Storytelling']],
+                    ['color'=>'bg-brandTeal','icon'=>'fa-baby','title'=>'Pre Nursery','age'=>'1.5 – 2.5 yrs','desc'=>'A gentle introduction to structured environment through sensory play, songs, and stories.','activities'=>['Sensory play','Music & rhymes','Storytelling']],
                     ['color'=>'bg-brandOrange','icon'=>'fa-child','title'=>'Nursery','age'=>'2.5 – 3.5 yrs','desc'=>'Building language, motor skills and social confidence in a warm classroom setting.','activities'=>['Language development','Fine motor skills','Social play']],
-                    ['color'=>'bg-blue-500','icon'=>'fa-pencil','title'=>'Junior KG','age'=>'3.5 – 4.5 yrs','desc'=>'Introduction to numbers, letters, and structured creative activities.','activities'=>['Pre-literacy','Pre-numeracy','Art & craft']],
-                    ['color'=>'bg-brandRed','icon'=>'fa-graduation-cap','title'=>'Senior KG','age'=>'4.5 – 6 yrs','desc'=>'School readiness program that prepares children academically, socially and emotionally.','activities'=>['Reading readiness','Team projects','Critical thinking']],
+                    ['color'=>'bg-blue-500','icon'=>'fa-pencil','title'=>'LKG','age'=>'3.5 – 4.5 yrs','desc'=>'Introduction to numbers, letters, and structured creative activities.','activities'=>['Pre-literacy','Pre-numeracy','Art & craft']],
+                    ['color'=>'bg-brandRed','icon'=>'fa-graduation-cap','title'=>'UKG','age'=>'4.5 – 6 yrs','desc'=>'School readiness program that prepares children academically, socially and emotionally.','activities'=>['Reading readiness','Team projects','Critical thinking']],
                 ];
                 foreach($programs as $p): ?>
                 <div class="bg-white rounded-[40px] overflow-hidden shadow-sm card-hover">
