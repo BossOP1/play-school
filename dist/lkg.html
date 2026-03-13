@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKG Program - The Foundation Play School</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF944D',
+                        brandBlue: '#65A1CA',
+                        brandTeal: '#639b9c',
+                        brandRed: '#EF6A59',
+                        brandBg: '#FFF7ED',
+                        brandDarkBlue: '#324E5B',
+                        textMain: '#2D3748',
+                        textLight: '#718096',
+                    },
+                    fontFamily: {
+                        heading: ['"Fredoka"', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'blob': '50% 50% 50% 50% / 60% 60% 40% 40%',
+                        'blob-reverse': '40% 60% 70% 30% / 40% 50% 60% 50%',
+                        'card': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom shapes from CSS since Tailwind can't do complex waves easily */
+        .wave-top {
+            clip-path: ellipse(150% 100% at 50% 100%);
+        }
+        .cloud-divider {
+            position: absolute;
+            top: -50px; left: 0; width: 100%; height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .cloud-divider-bottom {
+            position: absolute;
+            bottom: -50px; left: 0; width: 100%; height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,0 L0,0 Z" fill="%2365A1CA"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .bg-wave-cream {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="%23FFF7ED"/></svg>');
+            background-size: cover;
+        }
+        
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        .float-anim-delay { animation: float 6s ease-in-out infinite 2s; }
+        .float-anim-delay2 { animation: float 6s ease-in-out infinite 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .card-hover { @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl; }
+        .rounded-blob2 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    </style>
+</head>
+<body class="font-body text-textMain bg-white overflow-x-hidden">
+
+    <!-- Fixed Header Wrapper -->
+    <div class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Info Bar -->
+        <div class="bg-brandDarkBlue text-white/80 text-xs font-semibold py-2 px-8">
+            <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <span><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 123 Learning Lane, Playville</span>
+                    <span><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> info@thefoundation.edu</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-white/60">Follow Us On:</span>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Main Navbar -->
+        <div class="px-6 py-2 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+            <header class="py-3 px-8 max-w-[1400px] mx-auto flex justify-between items-center bg-white rounded-full shadow-sm">
+                <a href="index2.html" class="flex items-center gap-2 font-heading text-3xl font-bold text-brandDarkBlue hover:text-brandOrange transition">
+                    <i class="fa-solid fa-sun text-brandOrange"></i>
+                    The Foundation
+                </a>
+                <nav class="hidden lg:block ml-8">
+                    <ul class="flex items-center gap-8 text-sm font-bold text-textMain/80">
+                        <li><a href="index2.html" class="hover:text-brandOrange transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brandOrange transition">About Us</a></li>
+                        <li class="relative group">
+                                                        <a href="#" class="hover:text-brandOrange transition flex items-center gap-1 pb-4 -mb-4 pt-4 -mt-4">Programs <i class="fa-solid fa-chevron-down text-xs ml-0.5"></i></a>
+                            
+                            <!-- Enhanced Dropdown Menu -->
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white border border-gray-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] rounded-[24px] p-3 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-50 overflow-hidden">
+                                <ul class="flex flex-col gap-1">
+                                    <li>
+                                        <a href="pre-nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-teal-50 hover:text-brandTeal transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-teal-100 text-brandTeal flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-baby-carriage text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Pre Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">1.5 - 2.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-brandOrange transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-orange-100 text-brandOrange flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-palette text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">2.5 - 3.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="lkg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 hover:text-brandBlue transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-shapes text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">LKG</span>
+                                                <span class="text-xs text-textLight font-normal">3.5 - 4.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ukg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 hover:text-brandRed transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-red-100 text-brandRed flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-flask text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">UKG</span>
+                                                <span class="text-xs text-textLight font-normal">4.5 - 5.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="hover:text-brandOrange transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brandOrange transition">Contact</a></li>
+                        <!-- <li class="ml-4 border-l border-gray-200 pl-6"><i class="fa-solid fa-magnifying-glass hover:text-brandOrange cursor-pointer text-lg"></i></li> -->
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="bg-brandOrange text-white px-8 py-3.5 rounded-full font-bold shadow-md hover:bg-orange-500 transition shadow-brandOrange/30 text-sm">
+                        Book A Visit <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- Spacer to push content below fixed header (top bar ~32px + navbar ~72px) -->
+    <div class="h-[120px]"></div>
+
+<meta name="description" content="Our LKG program provides an engaging and playful learning environment for children aged 2.5 to 3.5 years, fostering growth, curiosity, and early academic readiness.">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative pt-32 pb-20 overflow-hidden -mt-[72px] bg-brandBlue/10">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none">
+            <i class="fa-solid fa-cloud absolute top-20 left-[10%] text-white text-7xl float-anim drop-shadow-sm"></i>
+            <i class="fa-solid fa-star absolute top-40 right-[15%] text-brandBlue/40 text-5xl float-anim-delay"></i>
+            <i class="fa-solid fa-baby absolute bottom-40 left-[15%] text-brandTeal/20 text-4xl float-anim-delay2"></i>
+            <i class="fa-solid fa-puzzle-piece absolute bottom-20 right-[10%] text-brandBlue/30 text-3xl float-anim"></i>
+            <i class="fa-solid fa-shapes absolute top-32 right-[30%] text-brandBlue/20 text-4xl float-anim-delay -rotate-12"></i>
+        </div>
+
+        <div class="max-w-[1300px] mx-auto px-5 relative z-10 flex flex-col md:flex-row items-center gap-12 mt-8">
+            <!-- Left Text Content -->
+            <div class="flex-1 text-center md:text-left">
+                <span class="inline-flex items-center gap-2 bg-white text-brandBlue font-bold text-sm tracking-widest uppercase mb-6 px-4 py-2 rounded-full shadow-sm">
+                    <i class="fa-solid fa-shapes"></i> Ages 3.5 - 4.5 Years
+                </span>
+                <h1 class="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 text-brandDarkBlue">
+                    LKG <br>
+                    <span class="text-brandBlue relative">
+                        Program
+                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-brandBlue/30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="currentColor" stroke-width="4" fill="transparent"/>
+                        </svg>
+                    </span>
+                </h1>
+                <p class="text-textLight mb-8 text-lg md:text-xl leading-relaxed max-w-lg mx-auto md:mx-0">
+                    A joyful and vibrant learning environment focused on developing curiosity, creativity, and foundational social skills for your fast-growing toddler.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="contact.html" class="bg-brandBlue text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brandBlue/30 hover:-translate-y-1 transition duration-300">
+                        Enroll Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image Content -->
+            <div class="flex-1 relative flex justify-center w-full max-w-lg mx-auto">
+                <div class="relative w-72 h-72 sm:w-[400px] sm:h-[400px] bg-white p-3 rounded-blob shadow-2xl z-20 hover:scale-[1.02] transition duration-500 overflow-hidden border-brandBlue/20 border-4">
+                    <img src="assets/img/lkg_hero.png" alt="LKG Children" class="w-full h-full object-cover rounded-blob">
+                </div>
+                
+                <!-- Floating decorations -->
+                <div class="absolute -left-6 top-10 w-20 h-20 bg-brandBlue/20 rounded-full border-4 border-white shadow-sm z-30 float-anim flex items-center justify-center text-brandBlue text-3xl">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div class="absolute -right-6 bottom-20 w-16 h-16 bg-brandBlue/20 rounded-blob shadow-sm z-30 float-anim-delay flex items-center justify-center text-brandBlue text-2xl">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave bottom transition -->
+        <div class="absolute bottom-0 left-0 w-full h-[80px] z-50 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0 C150,90 400,0 600,60 C800,120 1050,30 1200,90 L1200,120 L0,120 Z" fill="#ffffff" class="transition-all duration-300"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== OVERVIEW & FOCUS AREAS ===== -->
+    <section class="pt-10 pb-16 bg-white relative">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="text-brandBlue font-bold text-sm tracking-widest uppercase mb-3 block">Program Overview</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue mb-6">Fostering Joyful Discovery</h2>
+                <p class="text-textLight text-lg leading-relaxed">
+                    Our LKG curriculum bridges the gap between toddlerhood and structured learning. We introduce more engaging academic concepts naturally through play, storytelling, and collaborative activities, helping children build lasting confidence.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Focus 1 -->
+                <div class="bg-teal-50 rounded-[30px] p-8 text-center card-hover border border-teal-100">
+                    <div class="w-20 h-20 bg-white rounded-blob mx-auto flex items-center justify-center text-brandTeal text-4xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brandDarkBlue mb-4">Print Awareness</h3>
+                    <p class="text-textLight leading-relaxed select-none">
+                        Fostering early writing skills through tracing, drawing, and guided letter formation exercises using multisensory approaches.
+                    </p>
+                </div>
+                
+                <!-- Focus 2 -->
+                <div class="bg-blue-50 rounded-[30px] p-8 text-center card-hover border border-blue-100">
+                    <div class="w-20 h-20 bg-white rounded-blob mx-auto flex items-center justify-center text-brandBlue text-4xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brandDarkBlue mb-4">Number Concepts</h3>
+                    <p class="text-textLight leading-relaxed select-none">
+                        Introducing early mathematics through counting games, sorting objects, and recognizing patterns in a fun, hands-on way.
+                    </p>
+                </div>
+                
+                <!-- Focus 3 -->
+                <div class="bg-red-50 rounded-[30px] p-8 text-center card-hover border border-red-100">
+                    <div class="w-20 h-20 bg-white rounded-blob mx-auto flex items-center justify-center text-brandRed text-4xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brandDarkBlue mb-4">Phonics & Reading</h3>
+                    <p class="text-textLight leading-relaxed select-none">
+                        Building a strong literacy foundation by introducing letter sounds, blending, and early sight words through engaging stories and games.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave bottom transition to brandBg -->
+        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,60 C150,0 350,120 600,60 C850,0 1050,120 1200,60 L1200,120 L0,120 Z" fill="#FFF7ED"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== TYPICAL DAY SCHEDULE ===== -->
+    <section class="pt-12 pb-20 bg-brandBg relative overflow-hidden">
+        <!-- Abstract wave background -->
+        <i class="fa-solid fa-sun absolute -right-10 top-10 text-9xl text-brandBlue/5 rotate-45 pointer-events-none"></i>
+        <i class="fa-solid fa-rainbow absolute -left-10 bottom-10 text-9xl text-brandBlue/5 -rotate-12 pointer-events-none"></i>
+
+        <div class="max-w-[1100px] mx-auto px-5 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brandBlue font-bold text-sm tracking-widest uppercase mb-3 block">Daily Routine</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">A Day in LKG</h2>
+            </div>
+            
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <!-- Schedule Item -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-[30px] shadow-sm hover:shadow-md transition">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0">
+                        <img src="assets/img/gallery1.jpg" alt="Morning Greeting" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <div class="text-brandTeal font-bold mb-1"><i class="fa-regular fa-clock mr-1"></i> 09:00 AM - 09:30 AM</div>
+                        <h4 class="font-heading text-xl font-bold text-brandDarkBlue mb-2">Morning Assembly & Circle</h4>
+                        <p class="text-textLight text-sm m-0">A structured start to the day with greetings, calendar activities, weather discussions, and shared news.</p>
+                    </div>
+                </div>
+                
+                <!-- Schedule Item -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-[30px] shadow-sm hover:shadow-md transition">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0">
+                        <img src="assets/img/gallery2.jpg" alt="Literacy Time" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <div class="text-brandBlue font-bold mb-1"><i class="fa-regular fa-clock mr-1"></i> 09:30 AM - 10:15 AM</div>
+                        <h4 class="font-heading text-xl font-bold text-brandDarkBlue mb-2">Language & Literacy Focus</h4>
+                        <p class="text-textLight text-sm m-0">Engaging phonics exercises, vocabulary building games, and introductory alphabet tracing activities.</p>
+                    </div>
+                </div>
+                
+                <!-- Schedule Item -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-[30px] shadow-sm hover:shadow-md transition">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0">
+                        <img src="assets/img/gallery3.jpg" alt="Snack Time" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <div class="text-brandBlue font-bold mb-1"><i class="fa-regular fa-clock mr-1"></i> 10:15 AM - 10:45 AM</div>
+                        <h4 class="font-heading text-xl font-bold text-brandDarkBlue mb-2">Healthy Snack Break</h4>
+                        <p class="text-textLight text-sm m-0">Promoting independent eating, social conversations with peers, and practicing good table manners.</p>
+                    </div>
+                </div>
+
+                <!-- Schedule Item -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-[30px] shadow-sm hover:shadow-md transition">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0">
+                        <img src="assets/img/learning.jpg" alt="Math and Logic" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <div class="text-brandRed font-bold mb-1"><i class="fa-regular fa-clock mr-1"></i> 10:45 AM - 11:30 AM</div>
+                        <h4 class="font-heading text-xl font-bold text-brandDarkBlue mb-2">Math & Logical Thinking</h4>
+                        <p class="text-textLight text-sm m-0">Understanding numbers, shapes, and patterns using counting blocks, puzzles, and interactive group games.</p>
+                    </div>
+                </div>
+
+                <!-- Schedule Item -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-[30px] shadow-sm hover:shadow-md transition">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0">
+                        <img src="assets/img/graduation.jpg" alt="Departure" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center sm:text-left">
+                        <div class="text-brandTeal font-bold mb-1"><i class="fa-regular fa-clock mr-1"></i> 11:30 AM - 12:30 PM</div>
+                        <h4 class="font-heading text-xl font-bold text-brandDarkBlue mb-2">Creative Arts & Conclusion</h4>
+                        <p class="text-textLight text-sm m-0">Expressive arts and crafts, followed by a story review and an organized wrap-up before heading home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave bottom transition to FAQ bg -->
+        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,90 C300,0 600,120 900,30 C1050,-15 1150,40 1200,60 L1200,120 L0,120 Z" fill="#F2F8FB"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== FAQ / CURRICULUM DETAILS ===== -->
+    <section class="pt-12 pb-20 bg-[#F2F8FB] relative p-1">
+        <div class="max-w-[900px] mx-auto px-5">
+            <div class="text-center mb-12">
+                <span class="text-brandBlue font-bold text-sm tracking-widest uppercase mb-3 block">Curriculum Details</span>
+                <h2 class="text-4xl font-heading font-bold text-brandDarkBlue">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-white rounded-[20px] shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-bold font-heading text-xl cursor-pointer list-none p-6 text-brandDarkBlue hover:text-brandBlue transition">
+                        <span>What are the key focus areas in the LKG curriculum?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-brandBlue"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-textLight leading-relaxed">
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandBlue text-sm"></i> Advanced social skills and collaborative play</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandBlue text-sm"></i> Fine and gross motor skill enhancement</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandBlue text-sm"></i> Math Readiness (Counting, sorting, sizes)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandBlue text-sm"></i> Language Readiness (Phonics, vocabulary expansion)</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brandBlue text-sm"></i> Environmental awareness and exploration</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-white rounded-[20px] shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-bold font-heading text-xl cursor-pointer list-none p-6 text-brandDarkBlue hover:text-brandBlue transition">
+                        <span>What special activities are included?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-brandBlue"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-textLight leading-relaxed">
+                        <p class="mb-4">We offer a variety of special engaging activities designed to nurture diverse talents:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Creative Arts</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Personality Development</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Showstopper</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Mental Might</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Augmented Reality - Fantasy Box</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Eco-conscious</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Tell-a-Tale (Storytelling)</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Library Time</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Sciencify (Early Science)</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Whirl & Twirl</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Sensorium</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Critical Thinking</span>
+                            <span class="bg-white border border-gray-200 px-4 py-1.5 rounded-full text-sm text-brandDarkBlue shadow-sm">Integrated Sanskar</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-white rounded-[20px] shadow-sm [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center font-bold font-heading text-xl cursor-pointer list-none p-6 text-brandDarkBlue hover:text-brandBlue transition">
+                        <span>What does a typical session consist of?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-brandBlue"></i>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-textLight leading-relaxed">
+                        <p class="mb-4">Our daily sessions balance academic foundations with joyful play:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Morning Assembly</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Phonics & Letters</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Number Concepts</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Handwriting Practice</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Show & Tell</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Outdoor Exploration</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Creative Arts</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Festivals & Celebrations</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Field Visits</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Roleplay & Skits</span>
+                            <span class="bg-white border border-brandBlue/20 text-brandBlue px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">Healthy Snack</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        
+        <!-- Wave bottom transition to Blog bg -->
+        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,40 C100,100 250,10 400,60 C550,110 700,20 850,70 C1000,120 1100,30 1200,60 L1200,120 L0,120 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== BLOG SECTION ===== -->
+    <section class="pt-10 pb-20 bg-white relative overflow-hidden">
+        <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
+            <span class="text-brandBlue font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandTeal">The Foundation</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Blog Card 1 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in toddlers aged 1.5–2.5 years.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> March 5, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 2 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why LKG Rhymes Are More Than Just Fun</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> February 20, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Card 3 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for LKG</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your child is ready for our LKG program? Look for these five readiness signs before making the decision.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> January 15, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave bottom transition to CTA bg -->
+        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,60 C150,0 350,120 600,60 C850,0 1050,120 1200,60 L1200,120 L0,120 Z" fill="#324E5B"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="pt-10 pb-20 bg-brandDarkBlue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\'><circle cx=\'20\' cy=\'20\' r=\'2\' fill=\'white\'/></svg>');background-size:40px;"></div>
+        <i class="fa-solid fa-shapes float-anim absolute left-10 top-10 text-6xl text-brandTeal/20"></i>
+        <i class="fa-solid fa-heart float-anim-delay absolute right-16 bottom-10 text-5xl text-brandBlue/20"></i>
+        
+        <div class="max-w-[800px] mx-auto px-5 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
+                Ready to take the <span class="text-brandBlue">next step?</span>
+            </h2>
+            <p class="text-white/70 text-lg mb-10 leading-relaxed">
+                Give your child the perfect engaging start to their academic journey. Contact us to schedule a tour of our LKG classrooms.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html" class="bg-brandBlue text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-brandBlue/30 hover:-translate-y-1 transition">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Schedule a Tour
+                </a>
+            </div>
+        </div>
+        
+        <!-- Wave bottom transition to Footer bg -->
+        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
+            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,90 C300,0 600,120 900,30 C1050,-15 1150,40 1200,60 L1200,120 L0,120 Z" fill="#FFF7ED"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandBg pt-10 pb-10 relative">
+        <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-200 pb-12 mb-8">
+            <div class="pr-6">
+                <div class="flex items-center gap-2 font-heading text-2xl font-bold text-textMain mb-6">
+                    <i class="fa-solid fa-child-reaching text-brandOrange text-3xl"></i>
+                    The Foundation
+                </div>
+                <p class="text-sm text-textLight mb-6">Building strong foundations for lifelong learning, social skills, and emotional well-being since 2010.</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-8 h-8 rounded-full bg-white text-brandDarkBlue shadow flex items-center justify-center hover:bg-brandOrange hover:text-white transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-brandOrange text-white shadow-md shadow-brandOrange/40 flex items-center justify-center hover:bg-brandDarkBlue hover:text-white transition"><i class="fa-brands fa-twitter text-xs"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white text-brandDarkBlue shadow flex items-center justify-center hover:bg-brandOrange hover:text-white transition"><i class="fa-brands fa-instagram text-xs"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-textLight font-medium">
+                    <li><a href="index2.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Home</a></li>
+                    <li><a href="about.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> About Us</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Programs</a></li>
+                    <li><a href="contact.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Categories</h4>
+                <ul class="space-y-3 text-sm text-textLight font-medium">
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten 2</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool 2</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Our Gallery</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="assets/img/gallery1.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/img/gallery2.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/img/gallery3.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/img/gallery4.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/img/learning.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/img/hero.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center text-sm text-textLight font-medium">
+            &copy; 2026 The Foundation Play School. All rights reserved by the Author.
+        </div>
+
+        <!-- Bottom Wave for footer -->
+        <!-- <div class="w-full h-[60px] bg-white absolute bottom-0 left-0" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover;"></div> -->
+    </footer>
+</body>
+</html>

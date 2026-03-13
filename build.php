@@ -19,7 +19,11 @@ $pages = [
     'index.php',
     'index2.php',
     'about.php',
-    'contact.php'
+    'contact.php',
+    'pre-nursery.php',
+    'nursery.php',
+    'lkg.php',
+    'ukg.php'
 ];
 
 foreach ($pages as $page) {
