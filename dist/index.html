@@ -100,19 +100,62 @@
         <!-- Main Navbar -->
         <div class="px-6 py-2 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
             <header class="py-3 px-8 max-w-[1400px] mx-auto flex justify-between items-center bg-white rounded-full shadow-sm">
-                <div class="flex items-center gap-2 font-heading text-3xl font-bold text-brandDarkBlue">
+                <a href="index2.html" class="flex items-center gap-2 font-heading text-3xl font-bold text-brandDarkBlue hover:text-brandOrange transition">
                     <i class="fa-solid fa-sun text-brandOrange"></i>
                     The Foundation
-                </div>
+                </a>
                 <nav class="hidden lg:block ml-8">
                     <ul class="flex items-center gap-8 text-sm font-bold text-textMain/80">
                         <li><a href="index2.html" class="hover:text-brandOrange transition">Home</a></li>
                         <li><a href="about.html" class="hover:text-brandOrange transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-brandOrange transition">Programs</a></li>
-                        <li><a href="#" class="hover:text-brandOrange transition">Teachers</a></li>
+                        <li class="relative group">
+                                                        <a href="#" class="hover:text-brandOrange transition flex items-center gap-1 pb-4 -mb-4 pt-4 -mt-4">Programs <i class="fa-solid fa-chevron-down text-xs ml-0.5"></i></a>
+                            
+                            <!-- Enhanced Dropdown Menu -->
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white border border-gray-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] rounded-[24px] p-3 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-50 overflow-hidden">
+                                <ul class="flex flex-col gap-1">
+                                    <li>
+                                        <a href="pre-nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-teal-50 hover:text-brandTeal transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-teal-100 text-brandTeal flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-baby-carriage text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Pre Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">1.5 - 2.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-brandOrange transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-orange-100 text-brandOrange flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-palette text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">2.5 - 3.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="lkg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 hover:text-brandBlue transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-shapes text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">LKG</span>
+                                                <span class="text-xs text-textLight font-normal">3.5 - 4.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ukg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 hover:text-brandRed transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-red-100 text-brandRed flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-flask text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">UKG</span>
+                                                <span class="text-xs text-textLight font-normal">4.5 - 5.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="#" class="hover:text-brandOrange transition">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-brandOrange transition">Contact</a></li>
-                        <li class="ml-4 border-l border-gray-200 pl-6"><i class="fa-solid fa-magnifying-glass hover:text-brandOrange cursor-pointer text-lg"></i></li>
+                        <!-- <li class="ml-4 border-l border-gray-200 pl-6"><i class="fa-solid fa-magnifying-glass hover:text-brandOrange cursor-pointer text-lg"></i></li> -->
                     </ul>
                 </nav>
                 <div class="flex items-center gap-4">
@@ -372,11 +415,11 @@
                 <!-- Program 1 Teal -->
                 <div class="bg-brandTeal rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner rotate-3">
-                        <i class="fa-solid fa-book"></i>
+                        <i class="fa-solid fa-baby"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">English Class</h3>
-                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">4 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Learn new alphabet phrases naturally along</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">1.5 - 2.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Gentle introduction to structure</p>
                     <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandTeal rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -384,11 +427,11 @@
                 <!-- Program 2 Orange -->
                 <div class="bg-brandOrange rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2 lg:mt-6">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner -rotate-3">
-                        <i class="fa-solid fa-flask"></i>
+                        <i class="fa-solid fa-child"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Chemistry Class</h3>
-                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">5 - 7 years</p>
-                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Learn new alphabet phrases naturally along</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">2.5 - 3.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Building language & motor skills</p>
                     <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandOrange rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -396,11 +439,11 @@
                 <!-- Program 3 Blue -->
                 <div class="bg-blue-600 rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner rotate-3">
-                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-pencil"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Drawing Class</h3>
-                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">3 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Learn new alphabet phrases naturally along</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">3.5 - 4.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Letters, numbers & creativity</p>
                     <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -408,11 +451,11 @@
                 <!-- Program 4 Red -->
                 <div class="bg-brandRed rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2 lg:mt-6">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner -rotate-3">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Preschool</h3>
-                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">4 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Learn new alphabet phrases naturally along</p>
+                    <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">4.5 - 6 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">School readiness & preparation</p>
                     <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandRed rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -513,7 +556,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-[1000px] mx-auto px-5 text-center">
             <h2 class="text-3xl font-heading font-bold text-brandDarkBlue mb-12">What Clients Say</h2>
             
@@ -538,28 +581,57 @@
         </div>
     </section>
 
-    <!-- Footer Divider / Bridge -->
-    <section class="mt-0 relative pt-20 pb-16 bg-brandDarkBlue text-white">
-        <!-- Wavy Top Divider -->
-        <div class="absolute -top-[50px] left-0 w-full h-[60px] z-20" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23324E5B\'/></svg>'); background-size: cover; background-repeat: no-repeat;"></div>
 
+    <!-- ===== BLOG SECTION ===== -->
+    <section class="py-10 bg-white relative overflow-hidden">
         <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
-            <h2 class="text-3xl font-heading font-bold mb-12">Education Foundation<br>For A Better Future</h2>
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandOrange">The Foundation</span></h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-2 group text-left">
-                    <div class="overflow-hidden rounded-2xl h-48">
-                        <img src="assets/img/gallery1.jpg" alt="Activity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Blog Card 1 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in young children.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> March 5, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-2 group text-left">
-                    <div class="overflow-hidden rounded-2xl h-48">
-                        <img src="assets/img/gallery2.jpg" alt="Activity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Blog Card 2 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandOrange/10 text-brandOrange text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why Nursery Rhymes Are More Than Just Fun</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> February 20, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg p-2 group text-left">
-                    <div class="overflow-hidden rounded-2xl h-48">
-                        <img src="assets/img/gallery3.jpg" alt="Activity" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <!-- Blog Card 3 -->
+                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
+                    <div class="overflow-hidden h-52">
+                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
+                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for Preschool</h4>
+                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your toddler is ready? Look for these five readiness signs before making enrolment decision.</p>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> January 15, 2026</span>
+                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -567,7 +639,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brandBg pt-20 pb-20 relative">
+    <footer class="bg-brandBg pt-10 pb-10 relative">
         <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-200 pb-12 mb-8">
             <div class="pr-6">
                 <div class="flex items-center gap-2 font-heading text-2xl font-bold text-textMain mb-6">
@@ -620,7 +692,7 @@
         </div>
 
         <!-- Bottom Wave for footer -->
-        <div class="w-full h-[60px] bg-white absolute bottom-0 left-0" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover;"></div>
+        <!-- <div class="w-full h-[60px] bg-white absolute bottom-0 left-0" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover;"></div> -->
     </footer>
 </body>
 </html>
