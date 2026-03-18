@@ -86,8 +86,8 @@
         <div class="bg-brandDarkBlue text-white/80 text-xs font-semibold py-2 px-8">
             <div class="max-w-[1400px] mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-6">
-                    <span><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 123 Learning Lane, Playville</span>
-                    <span><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> info@thefoundation.edu</span>
+                    <span><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram</span>
+                    <span><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> playschoolthefoundation@gmail.com</span>
                 </div>
                 <div class="flex items-center gap-4">
                     <span class="text-white/60">Follow Us On:</span>
@@ -157,8 +157,8 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#" class="<?php echo ($currentPage == 'blog.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Blog</a></li>
-                        <li><a href="contact.php" class="<?php echo ($currentPage == 'contact.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Contact</a></li>
+                        <li><a href="gallery.php" class="<?php echo ($currentPage == 'gallery.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Gallery</a></li>
+<li><a href="contact.php" class="<?php echo ($currentPage == 'contact.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Contact</a></li>
                         <!-- <li class="ml-4 border-l border-gray-200 pl-6"><i class="fa-solid fa-magnifying-glass hover:text-brandOrange cursor-pointer text-lg"></i></li> -->
                     </ul>
                 </nav>

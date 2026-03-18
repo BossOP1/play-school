@@ -7,11 +7,6 @@
                     The Foundation
                 </div>
                 <p class="text-sm text-textLight mb-6">Building strong foundations for lifelong learning, social skills, and emotional well-being since 2010.</p>
-                <div class="flex gap-3">
-                    <a href="#" class="w-8 h-8 rounded-full bg-white text-brandDarkBlue shadow flex items-center justify-center hover:bg-brandOrange hover:text-white transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-brandOrange text-white shadow-md shadow-brandOrange/40 flex items-center justify-center hover:bg-brandDarkBlue hover:text-white transition"><i class="fa-brands fa-twitter text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white text-brandDarkBlue shadow flex items-center justify-center hover:bg-brandOrange hover:text-white transition"><i class="fa-brands fa-instagram text-xs"></i></a>
-                </div>
             </div>
             
             <div>
@@ -37,12 +32,12 @@
             <div>
                 <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Our Gallery</h4>
                 <div class="grid grid-cols-3 gap-2">
-                    <img src="assets/img/gallery1.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/img/gallery2.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/img/gallery3.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/img/gallery4.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/img/learning.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/img/hero.jpg" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_105055_373.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_105326_276.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_105534_078.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115028_061.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115045_945.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115103_087.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
                 </div>
             </div>
         </div>
@@ -54,5 +49,13 @@
         <!-- Bottom Wave for footer -->
         <!-- <div class="w-full h-[60px] bg-white absolute bottom-0 left-0" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover;"></div> -->
     </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918766337686" target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+   aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+</a>
+
 </body>
 </html>

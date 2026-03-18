@@ -49,8 +49,8 @@ include 'header.php';
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Our Location</h3>
                 <p class="text-textLight leading-relaxed">
-                    123 Learning Lane, Playville<br>
-                    Education District, ED 45678
+                    1st floor, Ramsons Kshitiji Commercial,<br>
+                    Sector 95, Gurugram, Haryana 122505
                 </p>
             </div>
 
@@ -62,8 +62,7 @@ include 'header.php';
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Phone Number</h3>
                 <p class="text-textLight leading-relaxed">
-                    +1 250 500 8192<br>
-                    +1 250 500 8193
+                    +91 87663 37686
                 </p>
             </div>
 
@@ -75,8 +74,7 @@ include 'header.php';
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Email Address</h3>
                 <p class="text-textLight leading-relaxed">
-                    admissions@thefoundation.edu<br>
-                    info@thefoundation.edu
+                    playschoolthefoundation@gmail.com
                 </p>
             </div>
 

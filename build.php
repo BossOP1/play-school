@@ -23,7 +23,8 @@ $pages = [
     'pre-nursery.php',
     'nursery.php',
     'lkg.php',
-    'ukg.php'
+    'ukg.php',
+    'gallery.php'
 ];
 
 foreach ($pages as $page) {

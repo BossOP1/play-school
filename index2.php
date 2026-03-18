@@ -16,7 +16,7 @@
                     Supporting your child to explore, discover, making new friends and master basic skills in a safe environment.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#" class="bg-brandOrange text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brandOrange/30 hover:-translate-y-1 transition text-sm">
+                    <a href="about.php" class="bg-brandOrange text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brandOrange/30 hover:-translate-y-1 transition text-sm">
                         Explore More <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                     <a href="#" class="flex items-center gap-3 font-bold text-textMain hover:text-brandOrange transition">
@@ -207,34 +207,6 @@
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="bg-brandBlue py-10 text-white relative">
-        <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
-            <div class="flex flex-col items-center">
-                <i class="fa-solid fa-award text-4xl mb-4 text-white/80"></i>
-                <h2 class="font-heading text-5xl font-bold mb-1">25+</h2>
-                <p class="font-semibold text-sm opacity-90">Years of Experience</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fa-solid fa-users text-4xl mb-4 text-white/80"></i>
-                <h2 class="font-heading text-5xl font-bold mb-1">6,500+</h2>
-                <p class="font-semibold text-sm opacity-90">Class Completed</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fa-solid fa-chalkboard-user text-4xl mb-4 text-white/80"></i>
-                <h2 class="font-heading text-5xl font-bold mb-1">100+</h2>
-                <p class="font-semibold text-sm opacity-90">Expert Instructors</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <i class="fa-solid fa-graduation-cap text-4xl mb-4 text-white/80"></i>
-                <h2 class="font-heading text-5xl font-bold mb-1">6,561+</h2>
-                <p class="font-semibold text-sm opacity-90">Students Enrolled</p>
-            </div>
-        </div>
-        
-        <!-- Cloud Divider Bottom (White matching next section) -->
-        <div class="absolute -bottom-[2px] left-0 w-full h-[60px] z-20" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,120 L0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 Z\' fill=\'%23ffffff\'/></svg>'); background-size: cover; background-repeat: no-repeat;"></div>
-    </section>
 
     <!-- Programs -->
     <section class="py-14 bg-white relative">
@@ -251,7 +223,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
                     <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">1.5 - 2.5 years</p>
                     <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Gentle introduction to structure</p>
-                    <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandTeal rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                    <a href="pre-nursery.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandTeal rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -263,7 +235,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
                     <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">2.5 - 3.5 years</p>
                     <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Building language & motor skills</p>
-                    <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandOrange rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                    <a href="nursery.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandOrange rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -275,7 +247,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
                     <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">3.5 - 4.5 years</p>
                     <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Letters, numbers & creativity</p>
-                    <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                    <a href="lkg.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -287,7 +259,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
                     <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">4.5 - 6 years</p>
                     <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">School readiness & preparation</p>
-                    <a href="#" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandRed rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                    <a href="ukg.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandRed rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -295,69 +267,6 @@
         </div>
     </section>
 
-    <!-- Cloud Divider (Programs to Instructors) -->
-    <div class="w-full h-[60px] bg-brandBg mt-[-1px] relative z-20" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23ffffff\'/></svg>'); background-size: cover; transform: rotate(180deg) scaleX(-1);"></div>
-
-    <!-- Instructors -->
-    <section class="py-12 bg-brandBg relative z-10">
-        <div class="max-w-[1300px] mx-auto px-5 relative z-30">
-            <div class="flex justify-between items-end mb-16 px-4">
-                <div>
-                    <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Our Expert</span>
-                    <h2 class="text-4xl text-brandDarkBlue font-heading font-bold">Our Expert Instructors</h2>
-                </div>
-                <div class="hidden md:flex gap-4">
-                    <button class="w-12 h-12 bg-white rounded-full text-textLight hover:text-brandOrange transition shadow-sm flex items-center justify-center"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="w-12 h-12 bg-brandOrange rounded-full text-white shadow-md flex items-center justify-center hover:bg-orange-500"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-                <!-- Teacher 1 -->
-                <div class="text-center group bg-white rounded-[40px] p-6 pb-10 shadow-lg hover:shadow-2xl transition duration-300 mt-16 relative">
-                    <div class="w-[220px] h-[220px] mx-auto bg-[#00a69c] rounded-blob p-2 overflow-hidden shadow-md group-hover:-rotate-3 transition -mt-28 mb-6 relative z-10">
-                        <img src="assets/img/teacher1.jpg" alt="Glen Macgosh" class="w-full h-full object-cover rounded-blob scale-105">
-                    </div>
-                    <h4 class="font-heading font-bold text-2xl text-brandDarkBlue mb-1">Glen MacGosh</h4>
-                    <p class="text-textLight text-sm mb-6 uppercase tracking-wider font-bold opacity-70">Senior Teacher</p>
-                    <div class="flex justify-center gap-6 border-t border-gray-200 border-dashed w-3/4 mx-auto pt-6">
-                        <a href="#" class="text-textLight hover:text-brandBlue"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-700"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <!-- Teacher 2 -->
-                <div class="text-center group bg-white rounded-[40px] p-6 pb-10 shadow-lg hover:shadow-2xl transition duration-300 mt-16 relative">
-                    <div class="w-[220px] h-[220px] mx-auto bg-[#3b82f6] rounded-blob p-2 overflow-hidden shadow-md group-hover:rotate-3 transition -mt-28 mb-6 relative z-10">
-                        <img src="assets/img/teacher2.jpg" alt="Henry Wood" class="w-full h-full object-cover rounded-blob scale-105">
-                    </div>
-                    <h4 class="font-heading font-bold text-2xl text-brandDarkBlue mb-1">Henry Wood</h4>
-                    <p class="text-textLight text-sm mb-6 uppercase tracking-wider font-bold opacity-70">Math Teacher</p>
-                    <div class="flex justify-center gap-6 border-t border-gray-200 border-dashed w-3/4 mx-auto pt-6">
-                        <a href="#" class="text-textLight hover:text-brandBlue"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-700"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <!-- Teacher 3 -->
-                <div class="text-center group bg-white rounded-[40px] p-6 pb-10 shadow-lg hover:shadow-2xl transition duration-300 mt-16 relative">
-                    <div class="w-[220px] h-[220px] mx-auto bg-[#f472b6] rounded-blob p-2 overflow-hidden shadow-md group-hover:-rotate-3 transition -mt-28 mb-6 relative z-10">
-                        <img src="assets/img/teacher3.jpg" alt="Marie Simpson" class="w-full h-full object-cover rounded-blob scale-105">
-                    </div>
-                    <h4 class="font-heading font-bold text-2xl text-brandDarkBlue mb-1">Marie Simpson</h4>
-                    <p class="text-textLight text-sm mb-6 uppercase tracking-wider font-bold opacity-70">English Teacher</p>
-                    <div class="flex justify-center gap-6 border-t border-gray-200 border-dashed w-3/4 mx-auto pt-6">
-                        <a href="#" class="text-textLight hover:text-brandBlue"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-700"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cloud Divider (Below Instructors -> Help Form) -->
-    <div class="w-full h-[60px] bg-white relative z-20 mt-[-2px]" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover; transform: rotate(180deg) scaleX(-1);"></div>
 
     <!-- Help Form (Dark block) -->
     <section class="py-10 bg-white">
@@ -390,83 +299,171 @@
     <section class="py-10 bg-white">
         <div class="max-w-[1000px] mx-auto px-5 text-center">
             <h2 class="text-3xl font-heading font-bold text-brandDarkBlue mb-12">What Clients Say</h2>
-            
-            <div class="bg-[#F2F8FB] rounded-[40px] p-10 md:p-16 relative shadow-sm border border-blue-50">
-                <i class="fa-solid fa-quote-left text-5xl text-brandBlue/20 absolute top-8 left-10"></i>
-                <i class="fa-solid fa-quote-right text-5xl text-brandBlue/20 absolute bottom-12 right-10"></i>
-                
-                <p class="text-lg md:text-xl font-medium text-textMain/80 mb-8 max-w-2xl mx-auto leading-relaxed relative z-10 italic">
-                    "Awesome preschool with lovely teachers who generally care about the kids and they look forward to going to preschool every day. Safe environment."
-                </p>
-                <div class="flex flex-col items-center">
-                    <img src="assets/img/parent.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover mb-3 shadow-md border-2 border-white">
-                    <h5 class="font-heading font-bold text-brandDarkBlue">Melissa Smith</h5>
+
+            <?php
+            $testimonials = [
+                ['quote' => 'Awesome preschool with lovely teachers who genuinely care about the kids. My child looks forward to going to school every single day. Safe and nurturing environment!', 'name' => 'Priya Sharma', 'role' => 'Mother of Ananya, 4 yrs'],
+                ['quote' => 'The play-based approach gave my shy son the confidence to make friends and express himself. We\'ve seen incredible growth in just 6 months. Highly recommended!', 'name' => 'Rajesh Mehta', 'role' => 'Father of Arjun, 3 yrs'],
+                ['quote' => 'As a parent, safety is my top priority. The CCTV, trained staff, and constant updates from teachers gave me complete peace of mind from day one.', 'name' => 'Sunita Patel', 'role' => 'Mother of Keya, 5 yrs'],
+                ['quote' => 'The teachers truly know each child by name and personality. My daughter\'s language development has been remarkable. So grateful for The Foundation!', 'name' => 'Amit Joshi', 'role' => 'Father of Riya, 4 yrs'],
+                ['quote' => 'Best decision we made for our child\'s early education. The curriculum is well-structured yet fun. The staff is always welcoming and professional.', 'name' => 'Neha Gupta', 'role' => 'Mother of Rohan, 3 yrs'],
+            ];
+            ?>
+
+            <div class="relative">
+                <!-- Prev Button -->
+                <button id="testi-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 w-11 h-11 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-brandDarkBlue hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all duration-300">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <!-- Next Button -->
+                <button id="testi-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 w-11 h-11 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-brandDarkBlue hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all duration-300">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+
+                <?php foreach($testimonials as $i => $t): ?>
+                <div class="testi-slide <?= $i === 0 ? '' : 'hidden' ?> bg-[#F2F8FB] rounded-[40px] p-10 md:p-16 relative shadow-sm border border-blue-50 transition-all duration-500">
+                    <i class="fa-solid fa-quote-left text-5xl text-brandBlue/20 absolute top-8 left-10"></i>
+                    <i class="fa-solid fa-quote-right text-5xl text-brandBlue/20 absolute bottom-12 right-10"></i>
+                    <p class="text-lg md:text-xl font-medium text-textMain/80 mb-8 max-w-2xl mx-auto leading-relaxed relative z-10 italic">
+                        "<?= htmlspecialchars($t['quote']) ?>"
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <img src="assets/img/google-review-image.png" alt="<?= htmlspecialchars($t['name']) ?>" class="w-16 h-16 rounded-full object-cover mb-3 shadow-md border-2 border-white">
+                        <h5 class="font-heading font-bold text-brandDarkBlue"><?= htmlspecialchars($t['name']) ?></h5>
+                        <p class="text-sm text-textLight"><?= htmlspecialchars($t['role']) ?></p>
+                    </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-            
-            <div class="flex justify-center gap-2 mt-6">
-                <span class="w-2.5 h-2.5 rounded-full bg-brandOrange"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span>
+
+            <div class="flex justify-center gap-2 mt-6" id="testi-dots">
+                <?php foreach($testimonials as $i => $_): ?>
+                <button class="testi-dot w-2.5 h-2.5 rounded-full transition-all duration-300 <?= $i === 0 ? 'bg-brandOrange scale-125' : 'bg-gray-200' ?>" data-index="<?= $i ?>"></button>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
 
+    <script>
+    (function() {
+        var slides = document.querySelectorAll('.testi-slide');
+        var dots = document.querySelectorAll('.testi-dot');
+        var current = 0;
+        var timer;
 
-    <!-- ===== BLOG SECTION ===== -->
-    <section class="py-10 bg-white relative overflow-hidden">
-        <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
-            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandOrange">The Foundation</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <!-- Blog Card 1 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in young children.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> March 5, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+        function goTo(index) {
+            slides[current].classList.add('hidden');
+            dots[current].classList.remove('bg-brandOrange', 'scale-125');
+            dots[current].classList.add('bg-gray-200');
+            current = index;
+            slides[current].classList.remove('hidden');
+            dots[current].classList.add('bg-brandOrange', 'scale-125');
+            dots[current].classList.remove('bg-gray-200');
+        }
+
+        function next() { goTo((current + 1) % slides.length); }
+        function prev() { goTo((current - 1 + slides.length) % slides.length); }
+
+        function resetTimer() { clearInterval(timer); timer = setInterval(next, 4000); }
+
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goTo(parseInt(this.getAttribute('data-index')));
+                resetTimer();
+            });
+        });
+
+        document.getElementById('testi-prev').addEventListener('click', function() { prev(); resetTimer(); });
+        document.getElementById('testi-next').addEventListener('click', function() { next(); resetTimer(); });
+
+        timer = setInterval(next, 4000);
+    })();
+    </script>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="py-16 bg-brandBg relative z-10 overflow-hidden">
+        <!-- Optional top decor if needed -->
+        <i class="fa-solid fa-camera absolute left-10 top-16 text-6xl text-brandBlue/5 -rotate-12"></i>
+        <i class="fa-solid fa-image absolute right-10 bottom-24 text-6xl text-brandOrange/5 rotate-12"></i>
+
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-12 relative z-20">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Gallery</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Captured Moments</h2>
+        </div>
+        
+        <style>
+        .animate-scroll-gallery {
+            animation: scroll-gallery 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        @keyframes scroll-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-gallery:hover {
+            animation-play-state: paused;
+        }
+        </style>
+
+        <div class="w-full relative z-20">
+            <div class="overflow-hidden w-full pb-8 pt-4">
+                <div class="animate-scroll-gallery items-center">
+                    <?php 
+                    $gallery_images = [
+                        "IMG_20250814_105055_373.webp",
+                        "IMG_20250814_105326_276.webp",
+                        "IMG_20250814_105534_078.webp",
+                        "IMG_20250814_115028_061.webp",
+                        "IMG_20250814_115045_945.webp",
+                        "IMG_20250814_115103_087.webp",
+                        "IMG_20250814_115119_815.webp",
+                        "IMG_20250814_115128_872.webp"
+                    ];
+                    shuffle($gallery_images);
+                    // Print them twice for the seamless loop
+                    for($i=0; $i<2; $i++) {
+                        foreach($gallery_images as $index => $img) {
+                    ?>
+                    <div class="w-[280px] md:w-[350px] shrink-0 mr-6 rounded-[30px] overflow-hidden shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group relative cursor-pointer">
+                        <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-56 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brandDarkBlue/0 group-hover:bg-brandDarkBlue/20 transition duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-camera text-white text-3xl opacity-0 group-hover:opacity-100 transition duration-300 transform scale-50 group-hover:scale-100"></i>
                         </div>
                     </div>
-                </div>
-                <!-- Blog Card 2 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandOrange/10 text-brandOrange text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why Nursery Rhymes Are More Than Just Fun</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> February 20, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Card 3 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for Preschool</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your toddler is ready? Look for these five readiness signs before making enrolment decision.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> January 15, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
+                    <?php 
+                        }
+                    }
+                    ?>
                 </div>
             </div>
+            <script>
+            (function() {
+                var gallery = document.querySelector('.animate-scroll-gallery');
+                if (!gallery) return;
+                var items = Array.from(gallery.children);
+                var half = items.length / 2;
+                var originals = items.slice(0, half);
+                for (var i = originals.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
+                }
+                gallery.innerHTML = '';
+                originals.forEach(function(el) { gallery.appendChild(el); });
+                originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
+            })();
+            </script>
+
+            <div class="text-center mt-8 mb-8">
+                <a href="gallery.php" class="inline-flex items-center gap-2 font-bold text-brandDarkBlue hover:text-brandOrange transition relative group">
+                    <span class="border-b-2 border-transparent group-hover:border-brandOrange pb-0.5 transition-colors">View Full Gallery</span> 
+                    <span class="w-8 h-8 rounded-full bg-brandOrange text-white flex items-center justify-center shadow-md group-hover:translate-x-1 transition-transform">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
+            </div>
         </div>
+        
     </section>
 
 <?php include 'footer.php'; ?>

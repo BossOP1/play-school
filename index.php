@@ -239,7 +239,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
                     <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">1.5 - 2.5 years</p>
                     <p class="text-sm opacity-90 mb-8">Gentle introduction to structure</p>
-                    <a href="#" class="inline-flex w-12 h-12 bg-white text-accentTeal rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
+                    <a href="pre-nursery.php" class="inline-flex w-12 h-12 bg-white text-accentTeal rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -252,7 +252,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
                     <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">2.5 - 3.5 years</p>
                     <p class="text-sm opacity-90 mb-8">Building language & motor skills</p>
-                    <a href="#" class="inline-flex w-12 h-12 bg-white text-primary rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
+                    <a href="nursery.php" class="inline-flex w-12 h-12 bg-white text-primary rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -265,7 +265,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
                     <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">3.5 - 4.5 years</p>
                     <p class="text-sm opacity-90 mb-8">Letters, numbers & creativity</p>
-                    <a href="#" class="inline-flex w-12 h-12 bg-white text-softBlue rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
+                    <a href="lkg.php" class="inline-flex w-12 h-12 bg-white text-softBlue rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -278,7 +278,7 @@
                     <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
                     <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">4.5 - 6 years</p>
                     <p class="text-sm opacity-90 mb-8">School readiness & preparation</p>
-                    <a href="#" class="inline-flex w-12 h-12 bg-white text-accentRed rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
+                    <a href="ukg.php" class="inline-flex w-12 h-12 bg-white text-accentRed rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -288,86 +288,72 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="py-20 bg-white" id="gallery">
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="text-center mb-12">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Gallery</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">Captured Moments</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/img/gallery1.jpg" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
+    <section class="py-20 bg-white overflow-hidden" id="gallery">
+        <div class="container mx-auto px-5 max-w-7xl text-center mb-12 relative z-10">
+            <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Gallery</span>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">Captured Moments</h2>
+        </div>
+
+        <style>
+        .animate-scroll-gallery {
+            animation: scroll-gallery 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        @keyframes scroll-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-gallery:hover {
+            animation-play-state: paused;
+        }
+        </style>
+
+        <div class="w-full relative z-10 pb-4">
+            <div class="animate-scroll-gallery items-center">
+                <?php 
+                $gallery_images = [
+                    "IMG_20250814_105055_373.webp",
+                    "IMG_20250814_105326_276.webp",
+                    "IMG_20250814_105534_078.webp",
+                    "IMG_20250814_115028_061.webp",
+                    "IMG_20250814_115045_945.webp",
+                    "IMG_20250814_115103_087.webp",
+                    "IMG_20250814_115119_815.webp",
+                    "IMG_20250814_115128_872.webp"
+                ];
+                shuffle($gallery_images);
+                // Print them twice for the seamless loop
+                for($i=0; $i<2; $i++) {
+                    foreach($gallery_images as $index => $img) {
+                ?>
+                <div class="w-[280px] md:w-[320px] shrink-0 mr-6 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                    <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/img/gallery2.jpg" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/img/gallery3.jpg" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/img/gallery4.jpg" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-500">
-                </div>
+                <?php 
+                    }
+                }
+                ?>
             </div>
         </div>
+        <script>
+        (function() {
+            var gallery = document.querySelector('.animate-scroll-gallery');
+            if (!gallery) return;
+            var items = Array.from(gallery.children);
+            var half = items.length / 2;
+            var originals = items.slice(0, half);
+            for (var i = originals.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
+            }
+            gallery.innerHTML = '';
+            originals.forEach(function(el) { gallery.appendChild(el); });
+            originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
+        })();
+        </script>
     </section>
 
-    <!-- Teachers Section -->
-    <section class="py-24 bg-cream">
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                <div>
-                    <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Instructors</span>
-                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">Our Expert Instructors</h2>
-                </div>
-                <div class="flex gap-4">
-                    <button class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-textLight hover:bg-primary hover:text-white transition-colors shadow-soft"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primaryHover transition-colors shadow-soft"><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Teacher 1 -->
-                <div class="bg-white rounded-[40px] p-8 pb-10 text-center shadow-soft hover:shadow-hover hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="w-48 h-48 mx-auto mb-8 bg-[#EAF2F4] rounded-t-img p-2 transition-all duration-300 group-hover:rounded-full">
-                        <img src="assets/img/teacher1.jpg" alt="Glen MacGosh" class="w-full h-full object-cover rounded-t-img group-hover:rounded-full transition-all duration-300">
-                    </div>
-                    <h4 class="font-heading text-2xl font-bold mb-1">Glen MacGosh</h4>
-                    <p class="text-primary font-semibold mb-6">Senior Teacher</p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-accentTeal transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-accentTeal transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-accentTeal transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <!-- Teacher 2 -->
-                <div class="bg-white rounded-[40px] p-8 pb-10 text-center shadow-soft hover:shadow-hover hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="w-48 h-48 mx-auto mb-8 bg-[#E6F3FA] rounded-t-img p-2 transition-all duration-300 group-hover:rounded-full">
-                        <img src="assets/img/teacher2.jpg" alt="Henry Wood" class="w-full h-full object-cover rounded-t-img group-hover:rounded-full transition-all duration-300">
-                    </div>
-                    <h4 class="font-heading text-2xl font-bold mb-1">Henry Wood</h4>
-                    <p class="text-softBlue font-semibold mb-6">Math Teacher</p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-softBlue transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-softBlue transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-softBlue transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <!-- Teacher 3 -->
-                <div class="bg-white rounded-[40px] p-8 pb-10 text-center shadow-soft hover:shadow-hover hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="w-48 h-48 mx-auto mb-8 bg-[#FFF0E5] rounded-t-img p-2 transition-all duration-300 group-hover:rounded-full">
-                        <img src="assets/img/teacher3.jpg" alt="Marie Simpson" class="w-full h-full object-cover rounded-t-img group-hover:rounded-full transition-all duration-300">
-                    </div>
-                    <h4 class="font-heading text-2xl font-bold mb-1">Marie Simpson</h4>
-                    <p class="text-primary font-semibold mb-6">English Teacher</p>
-                    <div class="flex justify-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-primary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-primary transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-cream flex items-center justify-center text-textLight hover:text-white hover:bg-primary transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Testimonials -->
     <section class="py-24 bg-white relative">
@@ -412,7 +398,7 @@
                             </div>
                             <div>
                                 <h4 class="font-heading font-bold text-xl mb-1">Our Location</h4>
-                                <p class="text-textLight m-0">123 Playful Lane, Kidsville Town, KV 90210</p>
+                                <p class="text-textLight m-0">1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram, Haryana 122505</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -421,7 +407,7 @@
                             </div>
                             <div>
                                 <h4 class="font-heading font-bold text-xl mb-1">Phone Number</h4>
-                                <p class="text-textLight m-0">+1 250 500 8192<br>+1 250 500 8193</p>
+                                <p class="text-textLight m-0">+91 87663 37686</p>
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
@@ -430,7 +416,7 @@
                             </div>
                             <div>
                                 <h4 class="font-heading font-bold text-xl mb-1">Email Address</h4>
-                                <p class="text-textLight m-0">admissions@thefoundation.edu</p>
+                                <p class="text-textLight m-0">playschoolthefoundation@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -470,61 +456,5 @@
         </div>
     </section>
 
-
-    <!-- ===== BLOG SECTION ===== -->
-    <section class="py-16 bg-white relative overflow-hidden">
-        <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
-            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandOrange">The Foundation</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <!-- Blog Card 1 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in young children.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> March 5, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Card 2 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandOrange/10 text-brandOrange text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why Nursery Rhymes Are More Than Just Fun</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> February 20, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Card 3 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for Preschool</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your toddler is ready? Look for these five readiness signs before making enrolment decision.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandOrange mr-1"></i> January 15, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandOrange hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 <?php include 'footer.php'; ?>

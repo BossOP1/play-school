@@ -47,7 +47,7 @@ include 'header.php';
                     A joyful journey from a small dream to India's most loved preschool community. Discover how we nurture curiosity and build bright futures.
                 </p>
                 <div class="flex flex-wrap justify-center gap-5">
-                    <a href="#" class="bg-brandOrange text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-brandOrange/30 hover:-translate-y-1 transition duration-300 group">
+                    <a href="contact.php" class="bg-brandOrange text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-brandOrange/30 hover:-translate-y-1 transition duration-300 group">
                         Join Our Family <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                     <a href="#story" class="flex items-center gap-3 font-bold text-brandDarkBlue hover:text-brandOrange transition bg-white px-8 py-5 rounded-full shadow-lg border border-orange-50">
@@ -327,10 +327,10 @@ include 'header.php';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <?php
                 $programs = [
-                    ['color'=>'bg-brandTeal','icon'=>'fa-baby','title'=>'Pre Nursery','age'=>'1.5 – 2.5 yrs','desc'=>'A gentle introduction to structured environment through sensory play, songs, and stories.','activities'=>['Sensory play','Music & rhymes','Storytelling']],
-                    ['color'=>'bg-brandOrange','icon'=>'fa-child','title'=>'Nursery','age'=>'2.5 – 3.5 yrs','desc'=>'Building language, motor skills and social confidence in a warm classroom setting.','activities'=>['Language development','Fine motor skills','Social play']],
-                    ['color'=>'bg-blue-500','icon'=>'fa-pencil','title'=>'LKG','age'=>'3.5 – 4.5 yrs','desc'=>'Introduction to numbers, letters, and structured creative activities.','activities'=>['Pre-literacy','Pre-numeracy','Art & craft']],
-                    ['color'=>'bg-brandRed','icon'=>'fa-graduation-cap','title'=>'UKG','age'=>'4.5 – 6 yrs','desc'=>'School readiness program that prepares children academically, socially and emotionally.','activities'=>['Reading readiness','Team projects','Critical thinking']],
+                    ['color'=>'bg-brandTeal','icon'=>'fa-baby','title'=>'Pre Nursery','age'=>'1.5 – 2.5 yrs','desc'=>'A gentle introduction to structured environment through sensory play, songs, and stories.','activities'=>['Sensory play','Music & rhymes','Storytelling'],'link'=>'pre-nursery.php'],
+                    ['color'=>'bg-brandOrange','icon'=>'fa-child','title'=>'Nursery','age'=>'2.5 – 3.5 yrs','desc'=>'Building language, motor skills and social confidence in a warm classroom setting.','activities'=>['Language development','Fine motor skills','Social play'],'link'=>'nursery.php'],
+                    ['color'=>'bg-blue-500','icon'=>'fa-pencil','title'=>'LKG','age'=>'3.5 – 4.5 yrs','desc'=>'Introduction to numbers, letters, and structured creative activities.','activities'=>['Pre-literacy','Pre-numeracy','Art & craft'],'link'=>'lkg.php'],
+                    ['color'=>'bg-brandRed','icon'=>'fa-graduation-cap','title'=>'UKG','age'=>'4.5 – 6 yrs','desc'=>'School readiness program that prepares children academically, socially and emotionally.','activities'=>['Reading readiness','Team projects','Critical thinking'],'link'=>'ukg.php'],
                 ];
                 foreach($programs as $p): ?>
                 <div class="bg-white rounded-[40px] overflow-hidden shadow-sm card-hover">
@@ -346,40 +346,7 @@ include 'header.php';
                             <li class="text-sm text-brandDarkBlue flex gap-2 items-center"><i class="fa-solid fa-circle text-[6px] text-brandOrange"></i><?= $act ?></li>
                             <?php endforeach; ?>
                         </ul>
-                        <a href="#" class="mt-5 inline-block text-sm font-bold text-brandOrange hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== 11. MEET OUR TEACHERS ===== -->
-    <section class="py-14 bg-white">
-        <div class="max-w-[1300px] mx-auto px-5">
-            <div class="text-center mb-16">
-                <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Our Team</span>
-                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Meet Our Teachers</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <?php
-                $teachers = [
-                    ['img'=>'assets/img/teacher1.jpg','name'=>'Glen MacGosh','qual'=>'M.Ed, Early Childhood','exp'=>'8 yrs','color'=>'bg-[#00a69c]'],
-                    ['img'=>'assets/img/teacher2.jpg','name'=>'Henry Wood','qual'=>'B.Ed, Child Psychology','exp'=>'5 yrs','color'=>'bg-[#3b82f6]'],
-                    ['img'=>'assets/img/teacher3.jpg','name'=>'Marie Simpson','qual'=>'M.Ed, Montessori','exp'=>'10 yrs','color'=>'bg-[#f472b6]'],
-                ];
-                foreach($teachers as $t): ?>
-                <div class="text-center group bg-white rounded-[40px] p-6 pb-10 shadow-lg hover:shadow-2xl transition duration-300 mt-16 relative">
-                    <div class="w-[200px] h-[200px] mx-auto <?= $t['color'] ?> rounded-blob p-2 overflow-hidden shadow-md group-hover:-rotate-3 transition -mt-28 mb-6 relative z-10">
-                        <img src="<?= $t['img'] ?>" alt="<?= $t['name'] ?>" class="w-full h-full object-cover rounded-blob scale-105">
-                    </div>
-                    <h4 class="font-heading font-bold text-2xl text-brandDarkBlue mb-1"><?= $t['name'] ?></h4>
-                    <p class="text-textLight text-sm mb-1 font-semibold"><?= $t['qual'] ?></p>
-                    <p class="text-brandOrange text-xs font-bold mb-5"><?= $t['exp'] ?> experience</p>
-                    <div class="flex justify-center gap-5 border-t border-dashed border-gray-200 w-3/4 mx-auto pt-5">
-                        <a href="#" class="text-textLight hover:text-brandBlue"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="text-textLight hover:text-blue-700"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="<?= $p['link'] ?>" class="mt-5 inline-block text-sm font-bold text-brandOrange hover:underline">Learn More <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -388,27 +355,6 @@ include 'header.php';
     </section>
 
 
-    <!-- ===== 13. STATS / ACHIEVEMENTS ===== -->
-    <section class="py-14 bg-brandBlue text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\'><circle cx=\'20\' cy=\'20\' r=\'2\' fill=\'white\'/></svg>');background-size:40px;"></div>
-        <div class="max-w-[1200px] mx-auto px-5 relative z-10">
-            <div class="text-center mb-10">
-                <span class="text-white/70 font-bold text-sm tracking-widest uppercase mb-3 block">Our Impact</span>
-                <h2 class="text-4xl font-heading font-bold">School Achievements</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <?php foreach([['fa-award','25+','Years Experience'],['fa-users','2000+','Happy Students'],['fa-chalkboard-user','15+','Expert Teachers'],['fa-heart','5000+','Families Trust Us']] as $s): ?>
-                <div class="group">
-                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 group-hover:bg-white/20 transition">
-                        <i class="fa-solid <?= $s[0] ?>"></i>
-                    </div>
-                    <div class="text-5xl font-heading font-bold mb-1"><?= $s[1] ?></div>
-                    <div class="text-sm font-semibold text-white/80"><?= $s[2] ?></div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== 14. TESTIMONIALS ===== -->
     <section class="py-14 bg-white">
@@ -420,10 +366,10 @@ include 'header.php';
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <?php
                 $testis = [
-                    ['quote'=>'"My child absolutely loves going to school every morning. The teachers are warm, caring and creative. Our school has been the best decision for our family."','name'=>'Priya Sharma','role'=>'Mother of Ananya, 4 yrs','img'=>'assets/img/founder.jpg'],
-                    ['quote'=>'"The daily routine and play-based approach gave my shy son the confidence to make friends and express himself. We\'ve seen incredible growth in just 6 months."','name'=>'Rajesh Mehta','role'=>'Father of Arjun, 3 yrs','img'=>'assets/img/founder.jpg'],
-                    ['quote'=>'"As a parent, safety is my top priority. The CCTV, trained staff, and constant updates from teachers gave me complete peace of mind from day one."','name'=>'Sunita Patel','role'=>'Mother of Keya, 5 yrs','img'=>'assets/img/founder.jpg'],
-                    ['quote'=>'"The teachers truly know each child by name and personality. My daughter\'s language development has been remarkable. So grateful for The Foundation!"','name'=>'Amit Joshi','role'=>'Father of Riya, 4 yrs','img'=>'assets/img/founder.jpg'],
+                    ['quote'=>'"My child absolutely loves going to school every morning. The teachers are warm, caring and creative. Our school has been the best decision for our family."','name'=>'Priya Sharma','role'=>'Mother of Ananya, 4 yrs','img'=>'assets/img/google-review-image.png'],
+                    ['quote'=>'"The daily routine and play-based approach gave my shy son the confidence to make friends and express himself. We\'ve seen incredible growth in just 6 months."','name'=>'Rajesh Mehta','role'=>'Father of Arjun, 3 yrs','img'=>'assets/img/google-review-image.png'],
+                    ['quote'=>'"As a parent, safety is my top priority. The CCTV, trained staff, and constant updates from teachers gave me complete peace of mind from day one."','name'=>'Sunita Patel','role'=>'Mother of Keya, 5 yrs','img'=>'assets/img/google-review-image.png'],
+                    ['quote'=>'"The teachers truly know each child by name and personality. My daughter\'s language development has been remarkable. So grateful for The Foundation!"','name'=>'Amit Joshi','role'=>'Father of Riya, 4 yrs','img'=>'assets/img/google-review-image.png'],
                 ];
                 foreach($testis as $t): ?>
                 <div class="bg-brandBg rounded-[30px] p-8 relative card-hover">
@@ -446,20 +392,84 @@ include 'header.php';
     </section>
 
     <!-- ===== 15. PHOTO GALLERY ===== -->
-    <section class="py-14 bg-brandBg">
-        <div class="max-w-[1300px] mx-auto px-5">
-            <div class="text-center mb-12">
-                <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Life at Our Foundation</span>
-                <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Photo Gallery</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <?php $imgs=['assets/img/hero.jpg','assets/img/learning.jpg','assets/img/graduation.jpg','assets/img/teacher1.jpg','assets/img/teacher2.jpg','assets/img/teacher3.jpg','assets/img/founder.jpg','assets/img/hero.jpg'];
-                $rounds=['rounded-[30px]','rounded-[40px]','rounded-[20px] md:row-span-2','rounded-[30px]'];
-                foreach($imgs as $i=>$img): ?>
-                <div class="<?= $rounds[$i%4] ?> overflow-hidden shadow-sm hover:shadow-xl transition duration-300 group <?= $i===2?'md:col-span-1':'' ?>">
-                    <img src="<?= $img ?>" alt="Gallery" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
+    <section class="py-16 bg-brandBg relative z-10 overflow-hidden">
+        <i class="fa-solid fa-camera absolute left-10 top-16 text-6xl text-brandBlue/5 -rotate-12"></i>
+        <i class="fa-solid fa-image absolute right-10 bottom-24 text-6xl text-brandOrange/5 rotate-12"></i>
+
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-12 relative z-20">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Life at Our Foundation</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Photo Gallery</h2>
+        </div>
+
+        <style>
+        .animate-scroll-gallery {
+            animation: scroll-gallery 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        @keyframes scroll-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-gallery:hover {
+            animation-play-state: paused;
+        }
+        </style>
+
+        <div class="w-full relative z-20">
+            <div class="overflow-hidden w-full pb-8 pt-4">
+                <div class="animate-scroll-gallery items-center">
+                    <?php
+                    $gallery_images = [
+                        "IMG_20250814_105055_373.webp",
+                        "IMG_20250814_105326_276.webp",
+                        "IMG_20250814_105534_078.webp",
+                        "IMG_20250814_115028_061.webp",
+                        "IMG_20250814_115045_945.webp",
+                        "IMG_20250814_115103_087.webp",
+                        "IMG_20250814_115119_815.webp",
+                        "IMG_20250814_115128_872.webp"
+                    ];
+                    shuffle($gallery_images);
+                    for($i=0; $i<2; $i++) {
+                        foreach($gallery_images as $index => $img) {
+                    ?>
+                    <div class="w-[280px] md:w-[350px] shrink-0 mr-6 rounded-[30px] overflow-hidden shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group relative cursor-pointer">
+                        <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-56 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brandDarkBlue/0 group-hover:bg-brandDarkBlue/20 transition duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-camera text-white text-3xl opacity-0 group-hover:opacity-100 transition duration-300 transform scale-50 group-hover:scale-100"></i>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
-                <?php endforeach; ?>
+            </div>
+            <script>
+            (function() {
+                var gallery = document.querySelector('.animate-scroll-gallery');
+                if (!gallery) return;
+                var items = Array.from(gallery.children);
+                var half = items.length / 2;
+                var originals = items.slice(0, half);
+                for (var i = originals.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
+                }
+                gallery.innerHTML = '';
+                originals.forEach(function(el) { gallery.appendChild(el); });
+                originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
+            })();
+            </script>
+
+            <div class="text-center mt-8 mb-8">
+                <a href="gallery.php" class="inline-flex items-center gap-2 font-bold text-brandDarkBlue hover:text-brandOrange transition relative group">
+                    <span class="border-b-2 border-transparent group-hover:border-brandOrange pb-0.5 transition-colors">View Full Gallery</span>
+                    <span class="w-8 h-8 rounded-full bg-brandOrange text-white flex items-center justify-center shadow-md group-hover:translate-x-1 transition-transform">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
             </div>
         </div>
     </section>

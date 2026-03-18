@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - The Foundation Play School</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF944D',
+                        brandBlue: '#65A1CA',
+                        brandTeal: '#639b9c',
+                        brandRed: '#EF6A59',
+                        brandBg: '#FFF7ED',
+                        brandDarkBlue: '#324E5B',
+                        textMain: '#2D3748',
+                        textLight: '#718096',
+                    },
+                    fontFamily: {
+                        heading: ['"Fredoka"', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'blob': '50% 50% 50% 50% / 60% 60% 40% 40%',
+                        'blob-reverse': '40% 60% 70% 30% / 40% 50% 60% 50%',
+                        'card': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom shapes from CSS since Tailwind can't do complex waves easily */
+        .wave-top {
+            clip-path: ellipse(150% 100% at 50% 100%);
+        }
+        .cloud-divider {
+            position: absolute;
+            top: -50px; left: 0; width: 100%; height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="%23ffffff"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .cloud-divider-bottom {
+            position: absolute;
+            bottom: -50px; left: 0; width: 100%; height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,0 L0,0 Z" fill="%2365A1CA"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .bg-wave-cream {
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="%23FFF7ED"/></svg>');
+            background-size: cover;
+        }
+        
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        .float-anim-delay { animation: float 6s ease-in-out infinite 2s; }
+        .float-anim-delay2 { animation: float 6s ease-in-out infinite 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .card-hover { @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl; }
+        .rounded-blob2 { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    </style>
+</head>
+<body class="font-body text-textMain bg-white overflow-x-hidden">
+
+    <!-- Fixed Header Wrapper -->
+    <div class="fixed top-0 left-0 w-full z-50">
+        <!-- Top Info Bar -->
+        <div class="bg-brandDarkBlue text-white/80 text-xs font-semibold py-2 px-8">
+            <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <span><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram</span>
+                    <span><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> playschoolthefoundation@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-white/60">Follow Us On:</span>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Main Navbar -->
+        <div class="px-6 py-2 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+            <header class="py-3 px-8 max-w-[1400px] mx-auto flex justify-between items-center bg-white rounded-full shadow-sm">
+                <a href="index2.html" class="flex items-center gap-2 font-heading text-3xl font-bold text-brandDarkBlue hover:text-brandOrange transition">
+                    <i class="fa-solid fa-sun text-brandOrange"></i>
+                    The Foundation
+                </a>
+                <nav class="hidden lg:block ml-8">
+                    <ul class="flex items-center gap-8 text-sm font-bold text-textMain/80">
+                        <li><a href="index2.html" class="hover:text-brandOrange transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brandOrange transition">About Us</a></li>
+                        <li class="relative group">
+                                                        <a href="#" class="hover:text-brandOrange transition flex items-center gap-1 pb-4 -mb-4 pt-4 -mt-4">Programs <i class="fa-solid fa-chevron-down text-xs ml-0.5"></i></a>
+                            
+                            <!-- Enhanced Dropdown Menu -->
+                            <div class="absolute top-12 left-1/2 -translate-x-1/2 bg-white border border-gray-100 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] rounded-[24px] p-3 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-50 overflow-hidden">
+                                <ul class="flex flex-col gap-1">
+                                    <li>
+                                        <a href="pre-nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-teal-50 hover:text-brandTeal transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-teal-100 text-brandTeal flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-baby-carriage text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Pre Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">1.5 - 2.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="nursery.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-orange-50 hover:text-brandOrange transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-orange-100 text-brandOrange flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-palette text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">Nursery</span>
+                                                <span class="text-xs text-textLight font-normal">2.5 - 3.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="lkg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 hover:text-brandBlue transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 text-brandBlue flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-shapes text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">LKG</span>
+                                                <span class="text-xs text-textLight font-normal">3.5 - 4.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ukg.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-red-50 hover:text-brandRed transition group/item text-textMain">
+                                            <div class="w-8 h-8 rounded-full bg-red-100 text-brandRed flex items-center justify-center shadow-sm shrink-0 group-hover/item:scale-110 transition"><i class="fa-solid fa-flask text-xs"></i></div>
+                                            <div class="flex flex-col">
+                                                <span class="font-heading font-bold text-base leading-tight">UKG</span>
+                                                <span class="text-xs text-textLight font-normal">4.5 - 5.5 Years</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="gallery.html" class="hover:text-brandOrange transition">Gallery</a></li>
+<li><a href="contact.html" class="hover:text-brandOrange transition">Contact</a></li>
+                        <!-- <li class="ml-4 border-l border-gray-200 pl-6"><i class="fa-solid fa-magnifying-glass hover:text-brandOrange cursor-pointer text-lg"></i></li> -->
+                    </ul>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="bg-brandOrange text-white px-8 py-3.5 rounded-full font-bold shadow-md hover:bg-orange-500 transition shadow-brandOrange/30 text-sm">
+                        Book A Visit <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- Spacer to push content below fixed header (top bar ~32px + navbar ~72px) -->
+    <div class="h-[120px]"></div>
+
+<!-- Hero -->
+<section class="relative pt-16 pb-16 overflow-hidden bg-gradient-to-br from-[#FFF9F5] via-[#FFF7ED] to-[#FFF1E5]">
+    <div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+        <i class="fa-solid fa-camera absolute top-20 left-[10%] text-brandOrange/20 text-7xl float-anim"></i>
+        <i class="fa-solid fa-images absolute top-40 right-[15%] text-brandBlue/20 text-5xl float-anim-delay"></i>
+        <i class="fa-solid fa-star absolute bottom-10 left-[40%] text-brandTeal/20 text-4xl float-anim-delay2"></i>
+    </div>
+    <div class="max-w-[1300px] mx-auto px-5 relative z-10 text-center">
+        <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full shadow-sm">
+            <i class="fa-solid fa-camera"></i> Our Gallery
+        </span>
+        <h1 class="text-5xl md:text-6xl font-heading font-bold leading-tight mb-6 text-brandDarkBlue">
+            Captured <span class="text-brandOrange">Moments</span>
+        </h1>
+        <p class="text-textLight text-lg max-w-xl mx-auto">
+            A glimpse into the joyful, colorful, and memory-filled world of The Foundation Play School.
+        </p>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1300px] mx-auto px-5">
+        
+        <div id="galleryGrid" class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="0"
+                 data-src="assets/gallery/IMG_20250814_105534_078.webp">
+                <img src="assets/gallery/IMG_20250814_105534_078.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="1"
+                 data-src="assets/gallery/IMG_20250815_100110_006.webp">
+                <img src="assets/gallery/IMG_20250815_100110_006.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="2"
+                 data-src="assets/gallery/IMG_20250815_100337_876.webp">
+                <img src="assets/gallery/IMG_20250815_100337_876.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="3"
+                 data-src="assets/gallery/IMG_20250814_105055_373.webp">
+                <img src="assets/gallery/IMG_20250814_105055_373.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="4"
+                 data-src="assets/gallery/Snapchat-101729502.jpg">
+                <img src="assets/gallery/Snapchat-101729502.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="5"
+                 data-src="assets/gallery/IMG_20250815_100159_509.webp">
+                <img src="assets/gallery/IMG_20250815_100159_509.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="6"
+                 data-src="assets/gallery/IMG_20251015_122050.jpg">
+                <img src="assets/gallery/IMG_20251015_122050.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="7"
+                 data-src="assets/gallery/IMG-20251017-WA0010.jpg">
+                <img src="assets/gallery/IMG-20251017-WA0010.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="8"
+                 data-src="assets/gallery/20250509_115829.jpg">
+                <img src="assets/gallery/20250509_115829.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="9"
+                 data-src="assets/gallery/IMG_20250814_115028_061.webp">
+                <img src="assets/gallery/IMG_20250814_115028_061.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="10"
+                 data-src="assets/gallery/IMG_20250815_104125_406.webp">
+                <img src="assets/gallery/IMG_20250815_104125_406.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="11"
+                 data-src="assets/gallery/Snapchat-147866039.jpg">
+                <img src="assets/gallery/Snapchat-147866039.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="12"
+                 data-src="assets/gallery/IMG_20250815_104138_913.webp">
+                <img src="assets/gallery/IMG_20250815_104138_913.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="13"
+                 data-src="assets/gallery/Snapchat-1735655510.jpg">
+                <img src="assets/gallery/Snapchat-1735655510.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="14"
+                 data-src="assets/gallery/Snapchat-189203823.jpg">
+                <img src="assets/gallery/Snapchat-189203823.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="15"
+                 data-src="assets/gallery/IMG_20250815_100419_530.webp">
+                <img src="assets/gallery/IMG_20250815_100419_530.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="16"
+                 data-src="assets/gallery/IMG-20251017-WA0009.jpg">
+                <img src="assets/gallery/IMG-20251017-WA0009.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="17"
+                 data-src="assets/gallery/IMG-20260215-WA0066.jpg">
+                <img src="assets/gallery/IMG-20260215-WA0066.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="18"
+                 data-src="assets/gallery/IMG_20250814_115045_945.webp">
+                <img src="assets/gallery/IMG_20250814_115045_945.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="19"
+                 data-src="assets/gallery/IMG_20250815_104212_584.webp">
+                <img src="assets/gallery/IMG_20250815_104212_584.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="20"
+                 data-src="assets/gallery/IMG_20250814_105326_276.webp">
+                <img src="assets/gallery/IMG_20250814_105326_276.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="21"
+                 data-src="assets/gallery/Snapchat-1235252430.jpg">
+                <img src="assets/gallery/Snapchat-1235252430.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="22"
+                 data-src="assets/gallery/IMG_20250814_115119_815.webp">
+                <img src="assets/gallery/IMG_20250814_115119_815.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="23"
+                 data-src="assets/gallery/Snapchat-1213888458.jpg">
+                <img src="assets/gallery/Snapchat-1213888458.jpg"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="24"
+                 data-src="assets/gallery/IMG_20250814_115128_872.webp">
+                <img src="assets/gallery/IMG_20250814_115128_872.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="25"
+                 data-src="assets/gallery/IMG_20250815_104154_866.webp">
+                <img src="assets/gallery/IMG_20250815_104154_866.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                        <div class="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer group gallery-item"
+                 data-index="26"
+                 data-src="assets/gallery/IMG_20250814_115103_087.webp">
+                <img src="assets/gallery/IMG_20250814_115103_087.webp"
+                     alt="Gallery Image"
+                     class="w-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+                    </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center hidden" role="dialog" aria-modal="true">
+    <button id="lbClose" class="absolute top-5 right-6 text-white text-4xl leading-none hover:text-brandOrange transition">&times;</button>
+    <button id="lbPrev" class="absolute left-4 md:left-8 text-white text-5xl leading-none hover:text-brandOrange transition select-none">&#8249;</button>
+    <button id="lbNext" class="absolute right-4 md:right-8 text-white text-5xl leading-none hover:text-brandOrange transition select-none">&#8250;</button>
+    <img id="lbImg" src="" alt="Gallery full view" class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl object-contain">
+    <div id="lbCounter" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/60 text-sm font-bold"></div>
+</div>
+
+<script>
+(function () {
+    var items = Array.from(document.querySelectorAll('.gallery-item'));
+    var srcs = items.map(function (el) { return el.getAttribute('data-src'); });
+    var current = 0;
+
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    var lbCounter = document.getElementById('lbCounter');
+
+    function show(index) {
+        current = (index + srcs.length) % srcs.length;
+        lbImg.src = srcs[current];
+        lbCounter.textContent = (current + 1) + ' / ' + srcs.length;
+        lb.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+        lb.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    items.forEach(function (el, i) {
+        el.addEventListener('click', function () { show(i); });
+    });
+
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', function () { show(current - 1); });
+    document.getElementById('lbNext').addEventListener('click', function () { show(current + 1); });
+
+    lb.addEventListener('click', function (e) {
+        if (e.target === lb) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (lb.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+    });
+})();
+</script>
+
+    <!-- Footer -->
+    <footer class="bg-brandBg pt-10 pb-10 relative">
+        <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-200 pb-12 mb-8">
+            <div class="pr-6">
+                <div class="flex items-center gap-2 font-heading text-2xl font-bold text-textMain mb-6">
+                    <i class="fa-solid fa-child-reaching text-brandOrange text-3xl"></i>
+                    The Foundation
+                </div>
+                <p class="text-sm text-textLight mb-6">Building strong foundations for lifelong learning, social skills, and emotional well-being since 2010.</p>
+            </div>
+            
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm text-textLight font-medium">
+                    <li><a href="index2.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Home</a></li>
+                    <li><a href="about.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> About Us</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Programs</a></li>
+                    <li><a href="contact.html" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Categories</h4>
+                <ul class="space-y-3 text-sm text-textLight font-medium">
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten 2</a></li>
+                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool 2</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Our Gallery</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="assets/gallery/IMG_20250814_105055_373.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_105326_276.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_105534_078.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115028_061.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115045_945.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                    <img src="assets/gallery/IMG_20250814_115103_087.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center text-sm text-textLight font-medium">
+            &copy; 2026 The Foundation Play School. All rights reserved by the Author.
+        </div>
+
+        <!-- Bottom Wave for footer -->
+        <!-- <div class="w-full h-[60px] bg-white absolute bottom-0 left-0" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23FFF7ED\'/></svg>'); background-size: cover;"></div> -->
+    </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918766337686" target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+   aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-white text-3xl"></i>
+</a>
+
+</body>
+</html>

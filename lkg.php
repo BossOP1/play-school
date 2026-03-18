@@ -295,66 +295,87 @@ include 'header.php';
         </div>
     </section>
 
-    <!-- ===== BLOG SECTION ===== -->
-    <section class="pt-10 pb-20 bg-white relative overflow-hidden">
-        <div class="max-w-[1300px] mx-auto px-5 text-center relative z-10">
-            <span class="text-brandBlue font-bold text-sm tracking-widest uppercase mb-3 block">Our Blog</span>
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-12 text-brandDarkBlue">Latest From <span class="text-brandTeal">The Foundation</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <!-- Blog Card 1 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery1.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandTeal/10 text-brandTeal text-xs font-bold px-3 py-1 rounded-full mb-3">Early Development</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">How Sensory Play Boosts Your Toddler's Brain</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Discover how sand, water, and texture-based activities shape early neural connections in toddlers aged 1.5–2.5 years.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> March 5, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="py-16 bg-brandBg relative z-10 overflow-hidden">
+        <i class="fa-solid fa-camera absolute left-10 top-16 text-6xl text-brandBlue/5 -rotate-12"></i>
+        <i class="fa-solid fa-image absolute right-10 bottom-24 text-6xl text-brandOrange/5 rotate-12"></i>
+
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-12 relative z-20">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Gallery</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Captured Moments</h2>
+        </div>
+
+        <style>
+        .animate-scroll-gallery {
+            animation: scroll-gallery 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        @keyframes scroll-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-gallery:hover {
+            animation-play-state: paused;
+        }
+        </style>
+
+        <div class="w-full relative z-20">
+            <div class="overflow-hidden w-full pb-8 pt-4">
+                <div class="animate-scroll-gallery items-center">
+                    <?php
+                    $gallery_images = [
+                        "IMG_20250814_105055_373.webp",
+                        "IMG_20250814_105326_276.webp",
+                        "IMG_20250814_105534_078.webp",
+                        "IMG_20250814_115028_061.webp",
+                        "IMG_20250814_115045_945.webp",
+                        "IMG_20250814_115103_087.webp",
+                        "IMG_20250814_115119_815.webp",
+                        "IMG_20250814_115128_872.webp"
+                    ];
+                    shuffle($gallery_images);
+                    for($i=0; $i<2; $i++) {
+                        foreach($gallery_images as $index => $img) {
+                    ?>
+                    <div class="w-[280px] md:w-[350px] shrink-0 mr-6 rounded-[30px] overflow-hidden shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group relative cursor-pointer">
+                        <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-56 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brandDarkBlue/0 group-hover:bg-brandDarkBlue/20 transition duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-camera text-white text-3xl opacity-0 group-hover:opacity-100 transition duration-300 transform scale-50 group-hover:scale-100"></i>
                         </div>
                     </div>
-                </div>
-                <!-- Blog Card 2 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery2.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Music & Play</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">Why LKG Rhymes Are More Than Just Fun</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Music and rhythm are among the most powerful tools for early language development. Here's what the science says.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> February 20, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog Card 3 -->
-                <div class="bg-brandBg rounded-[30px] overflow-hidden shadow-sm card-hover group">
-                    <div class="overflow-hidden h-52">
-                        <img src="assets/img/gallery3.jpg" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="inline-block bg-brandBlue/10 text-brandBlue text-xs font-bold px-3 py-1 rounded-full mb-3">Parenting Tips</span>
-                        <h4 class="font-heading font-bold text-xl text-brandDarkBlue mb-2 leading-snug">5 Signs Your Child is Ready for LKG</h4>
-                        <p class="text-textLight text-sm mb-4 leading-relaxed">Not sure if your child is ready for our LKG program? Look for these five readiness signs before making the decision.</p>
-                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
-                            <span class="text-xs text-textLight"><i class="fa-regular fa-calendar text-brandBlue mr-1"></i> January 15, 2026</span>
-                            <a href="#" class="text-sm font-bold text-brandBlue hover:underline">Read More <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-        </div>
-        
-        <!-- Wave bottom transition to CTA bg -->
-        <div class="absolute bottom-0 left-0 w-full h-[60px] z-20 overflow-hidden leading-[0]">
-            <svg class="relative block w-[200%] h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,60 C150,0 350,120 600,60 C850,0 1050,120 1200,60 L1200,120 L0,120 Z" fill="#324E5B"></path>
-            </svg>
+            <script>
+            (function() {
+                var gallery = document.querySelector('.animate-scroll-gallery');
+                if (!gallery) return;
+                var items = Array.from(gallery.children);
+                var half = items.length / 2;
+                var originals = items.slice(0, half);
+                for (var i = originals.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
+                }
+                gallery.innerHTML = '';
+                originals.forEach(function(el) { gallery.appendChild(el); });
+                originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
+            })();
+            </script>
+
+            <div class="text-center mt-8 mb-8">
+                <a href="gallery.php" class="inline-flex items-center gap-2 font-bold text-brandDarkBlue hover:text-brandOrange transition relative group">
+                    <span class="border-b-2 border-transparent group-hover:border-brandOrange pb-0.5 transition-colors">View Full Gallery</span>
+                    <span class="w-8 h-8 rounded-full bg-brandOrange text-white flex items-center justify-center shadow-md group-hover:translate-x-1 transition-transform">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
+            </div>
         </div>
     </section>
 
