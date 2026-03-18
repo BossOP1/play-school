@@ -86,14 +86,11 @@
         <div class="bg-brandDarkBlue text-white/80 text-xs font-semibold py-2 px-8">
             <div class="max-w-[1400px] mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-6">
-                    <span><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram</span>
-                    <span><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> playschoolthefoundation@gmail.com</span>
+                    <a href="https://maps.google.com/?q=Ramsons+Kshitiji+Commercial+Sector+95+Gurugram" target="_blank" class="hover:text-white transition"><i class="fa-solid fa-location-dot text-brandOrange mr-1.5"></i> 1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram</a>
+                    <a href="mailto:playschoolthefoundation@gmail.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-brandOrange mr-1.5"></i> playschoolthefoundation@gmail.com</a>
                 </div>
                 <div class="flex items-center gap-4">
-                    <span class="text-white/60">Follow Us On:</span>
-                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="hover:text-brandOrange transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="tel:+918766337686" class="hover:text-white transition"><i class="fa-solid fa-phone text-brandOrange mr-1.5"></i> +91 87663 37686</a>
                 </div>
             </div>
         </div>

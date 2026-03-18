@@ -19,12 +19,6 @@
                     <a href="about.php" class="bg-brandOrange text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brandOrange/30 hover:-translate-y-1 transition text-sm">
                         Explore More <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
-                    <a href="#" class="flex items-center gap-3 font-bold text-textMain hover:text-brandOrange transition">
-                        <span class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center bg-white shadow-sm">
-                            <i class="fa-solid fa-play text-brandOrange ml-1"></i>
-                        </span>
-                        Watch Video
-                    </a>
                 </div>
             </div>
             <!-- Right Image Blob -->

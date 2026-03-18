@@ -48,10 +48,10 @@ include 'header.php';
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Our Location</h3>
-                <p class="text-textLight leading-relaxed">
+                <a href="https://maps.google.com/?q=Ramsons+Kshitiji+Commercial+Sector+95+Gurugram+Haryana+122505" target="_blank" class="text-textLight leading-relaxed hover:text-brandBlue transition block">
                     1st floor, Ramsons Kshitiji Commercial,<br>
                     Sector 95, Gurugram, Haryana 122505
-                </p>
+                </a>
             </div>
 
             <!-- Phone Card -->
@@ -61,9 +61,9 @@ include 'header.php';
                     <i class="fa-solid fa-phone-volume"></i>
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Phone Number</h3>
-                <p class="text-textLight leading-relaxed">
+                <a href="tel:+918766337686" class="text-textLight leading-relaxed hover:text-brandOrange transition block">
                     +91 87663 37686
-                </p>
+                </a>
             </div>
 
             <!-- Email Card -->
@@ -73,9 +73,9 @@ include 'header.php';
                     <i class="fa-solid fa-envelope-open-text"></i>
                 </div>
                 <h3 class="font-heading font-bold text-2xl text-brandDarkBlue mb-3">Email Address</h3>
-                <p class="text-textLight leading-relaxed">
+                <a href="mailto:playschoolthefoundation@gmail.com" class="text-textLight leading-relaxed hover:text-brandTeal transition block">
                     playschoolthefoundation@gmail.com
-                </p>
+                </a>
             </div>
 
         </div>

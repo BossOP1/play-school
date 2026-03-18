@@ -50,9 +50,6 @@ include 'header.php';
                     <a href="contact.php" class="bg-brandOrange text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-brandOrange/30 hover:-translate-y-1 transition duration-300 group">
                         Join Our Family <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    <a href="#story" class="flex items-center gap-3 font-bold text-brandDarkBlue hover:text-brandOrange transition bg-white px-8 py-5 rounded-full shadow-lg border border-orange-50">
-                        <i class="fa-solid fa-play text-brandOrange"></i> Watch Our Story
-                    </a>
                 </div>
             </div>
 
@@ -392,7 +389,7 @@ include 'header.php';
     </section>
 
     <!-- ===== 15. PHOTO GALLERY ===== -->
-    <section class="py-16 bg-brandBg relative z-10 overflow-hidden">
+    <section class="py-14 bg-brandBg relative z-10 overflow-hidden">
         <i class="fa-solid fa-camera absolute left-10 top-16 text-6xl text-brandBlue/5 -rotate-12"></i>
         <i class="fa-solid fa-image absolute right-10 bottom-24 text-6xl text-brandOrange/5 rotate-12"></i>
 
@@ -474,9 +471,15 @@ include 'header.php';
         </div>
     </section>
 
+    <!-- Wave Divider: Gallery → Admission -->
+    <div class="relative bg-brandBg -mt-1">
+        <svg class="block w-full" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1380,20 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+        </svg>
+    </div>
 
     <!-- ===== 17. ADMISSION PROCESS ===== -->
-    <section class="py-14 bg-brandBg">
+    <section class="py-14 bg-white">
         <div class="max-w-[900px] mx-auto px-5 text-center">
             <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-3 block">Getting Started</span>
             <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue mb-4">Admission Process</h2>
@@ -496,11 +499,18 @@ include 'header.php';
                 </div>
                 <?php endforeach; ?>
             </div>
-            <a href="#" class="mt-12 inline-block bg-brandOrange text-white px-10 py-4 rounded-full font-bold shadow-lg hover:-translate-y-1 transition text-sm">
+            <a href="contact.php" class="mt-12 inline-block bg-brandOrange text-white px-10 py-4 rounded-full font-bold shadow-lg hover:-translate-y-1 transition text-sm">
                 Start Admission <i class="fa-solid fa-arrow-right ml-2"></i>
             </a>
         </div>
     </section>
+
+    <!-- Wave Divider: Admission → CTA -->
+    <div class="relative bg-white -mt-1">
+        <svg class="block w-full" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,20 C240,80 480,0 720,40 C960,80 1200,0 1440,30 L1440,80 L0,80 Z" fill="#324E5B"/>
+        </svg>
+    </div>
 
     <!-- ===== 18. CALL TO ACTION ===== -->
     <section class="py-16 bg-brandDarkBlue relative overflow-hidden">
@@ -513,10 +523,10 @@ include 'header.php';
             </h2>
             <p class="text-white/70 text-lg mb-10 leading-relaxed">Join thousands of happy families who've trusted The Foundation with their child's most important years. We'd love to welcome your little one!</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" class="bg-brandOrange text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-brandOrange/30 hover:-translate-y-1 transition">
+                <a href="contact.php" class="bg-brandOrange text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-brandOrange/30 hover:-translate-y-1 transition">
                     <i class="fa-solid fa-calendar-check mr-2"></i> Schedule a Visit
                 </a>
-                <a href="#" class="bg-white text-brandDarkBlue px-10 py-4 rounded-full font-bold hover:-translate-y-1 transition shadow-xl">
+                <a href="contact.php" class="bg-white text-brandDarkBlue px-10 py-4 rounded-full font-bold hover:-translate-y-1 transition shadow-xl">
                     <i class="fa-solid fa-file-lines text-brandOrange mr-2"></i> Enroll Now
                 </a>
             </div>

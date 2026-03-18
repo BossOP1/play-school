@@ -30,15 +30,21 @@
             </div>
 
             <div>
-                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Our Gallery</h4>
-                <div class="grid grid-cols-3 gap-2">
-                    <img src="assets/gallery/IMG_20250814_105055_373.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/gallery/IMG_20250814_105326_276.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/gallery/IMG_20250814_105534_078.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/gallery/IMG_20250814_115028_061.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/gallery/IMG_20250814_115045_945.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                    <img src="assets/gallery/IMG_20250814_115103_087.webp" alt="Gallery" class="w-full h-16 object-cover rounded-xl shadow-sm border border-white">
-                </div>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Contact Us</h4>
+                <ul class="space-y-4 text-sm text-textLight font-medium">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-brandOrange mt-0.5 shrink-0"></i>
+                        <a href="https://maps.google.com/?q=Ramsons+Kshitiji+Commercial+Sector+95+Gurugram+Haryana+122505" target="_blank" class="hover:text-brandOrange transition leading-relaxed">1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram, Haryana 122505</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brandOrange shrink-0"></i>
+                        <a href="tel:+918766337686" class="hover:text-brandOrange transition">+91 87663 37686</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brandOrange shrink-0"></i>
+                        <a href="mailto:playschoolthefoundation@gmail.com" class="hover:text-brandOrange transition">playschoolthefoundation@gmail.com</a>
+                    </li>
+                </ul>
             </div>
         </div>
         

@@ -19,12 +19,6 @@
                     <a href="#explore" class="inline-block bg-primary text-white font-heading font-bold py-3 px-8 rounded-full shadow-btn hover:bg-primaryHover hover:-translate-y-1 hover:shadow-btn-hover transition-all duration-300">
                         Explore More <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
-                    <a href="#video" class="flex items-center gap-3 font-heading font-bold text-textDark hover:text-primary transition-colors group">
-                        <span class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-play ml-1"></i>
-                        </span>
-                        Watch Video
-                    </a>
                 </div>
             </div>
             
@@ -181,40 +175,6 @@
                             <p class="text-textLight text-sm m-0">Holistic personality development</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-16 bg-softBlue relative">
-        <div class="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
-            <!-- Decorative wave background pattern if needed -->
-            <svg viewBox="0 0 1440 320" class="absolute bottom-0 w-full h-auto text-white fill-current">
-                <path d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
-        <div class="container mx-auto px-5 max-w-7xl relative z-10">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
-                <div class="p-4 hover:-translate-y-2 transition-transform">
-                    <i class="fa-solid fa-paper-plane text-4xl mb-4 opacity-90"></i>
-                    <h2 class="font-heading text-5xl font-bold mb-2">25+</h2>
-                    <p class="font-semibold text-white/80">Years of Experience</p>
-                </div>
-                <div class="p-4 hover:-translate-y-2 transition-transform">
-                    <i class="fa-solid fa-users text-4xl mb-4 opacity-90"></i>
-                    <h2 class="font-heading text-5xl font-bold mb-2">6,500+</h2>
-                    <p class="font-semibold text-white/80">Class Completed</p>
-                </div>
-                <div class="p-4 hover:-translate-y-2 transition-transform">
-                    <i class="fa-solid fa-chalkboard-user text-4xl mb-4 opacity-90"></i>
-                    <h2 class="font-heading text-5xl font-bold mb-2">100+</h2>
-                    <p class="font-semibold text-white/80">Expert Instructors</p>
-                </div>
-                <div class="p-4 hover:-translate-y-2 transition-transform">
-                    <i class="fa-solid fa-graduation-cap text-4xl mb-4 opacity-90"></i>
-                    <h2 class="font-heading text-5xl font-bold mb-2">6,561+</h2>
-                    <p class="font-semibold text-white/80">Students Enrolled</p>
                 </div>
             </div>
         </div>
