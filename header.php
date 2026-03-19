@@ -100,13 +100,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <!-- Main Navbar -->
         <div class="px-6 py-2 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
             <header class="py-3 px-8 max-w-[1400px] mx-auto flex justify-between items-center bg-white rounded-full shadow-sm">
-                <a href="index2.php" class="flex items-center gap-2 font-heading text-3xl font-bold text-brandDarkBlue hover:text-brandOrange transition">
-                    <i class="fa-solid fa-sun text-brandOrange"></i>
-                    The Foundation
+                <a href="index.php" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="assets/img/Play_school_logo-removebg-preview (1).png" alt="The Foundation Play School" class="h-20 w-auto object-contain">
                 </a>
                 <nav class="hidden lg:block ml-8">
                     <ul class="flex items-center gap-8 text-sm font-bold text-textMain/80">
-                        <li><a href="index2.php" class="<?php echo ($currentPage == 'index2.php' || $currentPage == 'index.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Home</a></li>
+                        <li><a href="index.php" class="<?php echo ($currentPage == 'index.php' || $currentPage == 'index.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">Home</a></li>
                         <li><a href="about.php" class="<?php echo ($currentPage == 'about.php') ? 'text-brandOrange' : 'hover:text-brandOrange'; ?> transition">About Us</a></li>
                         <li class="relative group">
                             <?php $isProgramActive = in_array($currentPage, ['pre-nursery.php', 'nursery.php', 'lkg.php', 'ukg.php']); ?>

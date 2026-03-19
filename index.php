@@ -1,259 +1,390 @@
 <?php include 'header.php'; ?>
-<body class="font-body text-textDark bg-white overflow-x-hidden leading-relaxed">
-
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-24 bg-cream relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-full md:w-[45%] h-[60%] md:h-full bg-primary rounded-bl-[60px] md:rounded-bl-[100px] z-0 opacity-80"></div>
+    <section class="relative bg-brandBg pt-16 pb-20 overflow-hidden -mt-[88px]">
+        <!-- Right side large semi wave -->
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-brandOrange/80 rounded-bl-[200px] z-0 opacity-90 hidden md:block"></div>
         
-        <div class="container mx-auto px-5 max-w-7xl flex flex-col md:flex-row items-center gap-12 relative z-10">
-            <div class="flex-1 text-center md:text-left">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-6">Preschool & Child Care</span>
-                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-textDark leading-tight mb-6">
-                    We Prepare Your <span class="text-primary">Child</span> For Life
+        <div class="max-w-[1300px] mx-auto px-5 mt-24 flex flex-col md:flex-row items-center relative z-10">
+            <!-- Left Text -->
+            <div class="flex-1 pr-10">
+                <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block"><i class="fa-solid fa-heart mr-2"></i>Preschool & Child Care</span>
+                <h1 class="text-5xl md:text-7xl font-heading font-bold leading-[1.1] mb-6 text-brandDarkBlue">
+                    We Prepare Your <br><span class="text-brandOrange">Child</span> For Life
                 </h1>
-                <p class="text-textLight text-lg mb-8 max-w-lg mx-auto md:mx-0">
-                    Nurturing children through engaging, play-based learning in a safe and supportive environment where every child blossoms.
+                <p class="text-textLight mb-8 max-w-md text-lg leading-relaxed">
+                    Supporting your child to explore, discover, making new friends and master basic skills in a safe environment.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center gap-6 justify-center md:justify-start">
-                    <a href="#explore" class="inline-block bg-primary text-white font-heading font-bold py-3 px-8 rounded-full shadow-btn hover:bg-primaryHover hover:-translate-y-1 hover:shadow-btn-hover transition-all duration-300">
-                        Explore More <i class="fa-solid fa-arrow-right ml-2"></i>
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <a href="about.php" class="bg-brandOrange text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-brandOrange/30 hover:-translate-y-1 transition text-sm">
+                        Explore More <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>
             </div>
-            
-            <div class="flex-1 relative flex justify-center mt-12 md:mt-0">
-                <div class="w-72 h-72 sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] bg-[#FFE5D0] border-[10px] border-white shadow-soft overflow-hidden blob-morph relative">
-                    <img src="assets/img/hero.jpg" alt="Happy Kids" class="w-full h-full object-cover">
+            <!-- Right Image Blob -->
+            <div class="flex-1 relative mt-16 md:mt-0 flex justify-center pb-8">
+                <div class="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]">
+                    <div class="absolute inset-0 bg-yellow-400 rounded-full border-8 border-white shadow-xl overflow-hidden z-10 border-opacity-30">
+                        <img src="assets/img/hero.jpg" alt="Hero Kids" class="w-full h-full object-cover">
+                    </div>
                 </div>
-                <!-- Decorative elements -->
-                <i class="fa-solid fa-paper-plane absolute -top-4 md:top-6 left-0 md:left-6 text-3xl text-primary -rotate-12 animate-float"></i>
-                <i class="fa-solid fa-star absolute bottom-6 right-6 md:bottom-12 md:right-12 text-3xl text-yellow-400 animate-bounce-slow"></i>
-                <i class="fa-solid fa-cloud absolute top-1/4 -right-4 text-4xl text-white opacity-60 animate-float-delayed"></i>
+                <!-- Doodles -->
+                <i class="fa-solid fa-paper-plane absolute -left-10 top-20 text-3xl text-brandOrange/60 -rotate-12"></i>
+                <i class="fa-solid fa-pencil absolute left-10 bottom-10 text-3xl text-gray-300"></i>
+                <i class="fa-solid fa-car absolute right-0 bottom-0 text-3xl text-brandOrange"></i>
+                <i class="fa-solid fa-question absolute right-10 top-0 text-3xl text-brandBlue"></i>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Divider for Hero -->
+        <div class="absolute bottom-[-2px] left-0 w-full h-[80px] z-20 pointer-events-none" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C150,120 250,0 400,60 C550,120 650,0 800,60 C950,120 1050,0 1200,60 L1200,120 L0,120 Z\' fill=\'%23ffffff\'/></svg>'); background-size: cover; background-repeat: no-repeat;"></div>
+    </section>
+
+    <!-- Features -->
+    <section class="pt-6 pb-14 bg-white relative z-10 mt-[-20px]">
+        <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center relative z-20">
+            <div class="px-6 relative group">
+                <div class="w-24 h-24 mx-auto mb-6 bg-orange-100 rounded-blob text-brandOrange flex items-center justify-center text-4xl group-hover:bg-brandOrange group-hover:text-white transition-all duration-300 group-hover:rotate-12">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Choose a Service</h3>
+                <p class="text-textLight text-sm">A brief sentence indicating the goal of this service.</p>
+            </div>
+            <div class="px-6 relative group">
+                <div class="w-24 h-24 mx-auto mb-6 bg-blue-100 rounded-blob text-brandBlue flex items-center justify-center text-4xl group-hover:bg-brandBlue group-hover:text-white transition-all duration-300 group-hover:-rotate-12">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Expert Teachers</h3>
+                <p class="text-textLight text-sm">A brief sentence indicating the goal of this service.</p>
+            </div>
+            <div class="px-6 relative group">
+                <div class="w-24 h-24 mx-auto mb-6 bg-teal-100 rounded-blob text-brandTeal flex items-center justify-center text-4xl group-hover:bg-brandTeal group-hover:text-white transition-all duration-300 group-hover:rotate-12">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">E-Learning Media</h3>
+                <p class="text-textLight text-sm">A brief sentence indicating the goal of this service.</p>
+            </div>
+            <div class="px-6 relative group">
+                <div class="w-24 h-24 mx-auto mb-6 bg-red-100 rounded-blob text-brandRed flex items-center justify-center text-4xl group-hover:bg-brandRed group-hover:text-white transition-all duration-300 group-hover:-rotate-12">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl mb-3">Full Day Programs</h3>
+                <p class="text-textLight text-sm">A brief sentence indicating the goal of this service.</p>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Feature 1 -->
-                <div class="text-center p-6 rounded-3xl transition-all duration-300 hover:shadow-hover hover:-translate-y-2 group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-[#FFF0E5] text-primary rounded-blob flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-shield-cat"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3">Safe Environment</h3>
-                    <p class="text-textLight">A secure, monitored campus ensures peace of mind for parents.</p>
+    <!-- Learn & Play (About) -->
+    <section class="py-14 bg-brandBg relative">
+        <div class="max-w-[1300px] mx-auto px-5 flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 w-full mx-auto relative">
+                <!-- Large blob bg -->
+                <div class="w-[300px] h-[300px] md:w-[450px] md:h-[450px] bg-brandDarkBlue rounded-blob m-auto overflow-hidden shadow-2xl relative z-10">
+                    <img src="assets/img/learning.jpg" alt="Child learning" class="w-full h-full object-cover">
                 </div>
-                <!-- Feature 2 -->
-                <div class="text-center p-6 rounded-3xl transition-all duration-300 hover:shadow-hover hover:-translate-y-2 group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-[#E6F3FA] text-softBlue rounded-blob flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-chalkboard-user"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3">Expert Teachers</h3>
-                    <p class="text-textLight">Qualified, passionate educators who understand child development.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="text-center p-6 rounded-3xl transition-all duration-300 hover:shadow-hover hover:-translate-y-2 group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-[#EAF2F4] text-accentTeal rounded-blob flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-puzzle-piece"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3">Play Based Learning</h3>
-                    <p class="text-textLight">Interactive activities that foster cognitive and social skills.</p>
-                </div>
-                <!-- Feature 4 -->
-                <div class="text-center p-6 rounded-3xl transition-all duration-300 hover:shadow-hover hover:-translate-y-2 group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-[#FDECEC] text-accentRed rounded-blob flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3">Full Day Programs</h3>
-                    <p class="text-textLight">Flexible schedules adapting to modern working parents.</p>
-                </div>
+                <div class="absolute -z-0 bg-brandOrange w-48 h-48 rounded-full blur-3xl opacity-20 -left-10 bottom-0"></div>
+                <div class="absolute -right-10 top-1/2 w-8 h-8 rounded-full border-4 border-brandOrange"></div>
             </div>
-        </div>
-    </section>
-
-    <!-- About / Learning Section -->
-    <section class="py-24 bg-cream" id="about">
-        <div class="container mx-auto px-5 max-w-7xl flex flex-col md:flex-row items-center gap-16">
-            <div class="flex-1 w-full order-2 md:order-1">
-                <div class="w-full max-w-[450px] aspect-square mx-auto bg-white p-4 rounded-blob-alt shadow-soft relative">
-                    <img src="assets/img/learning.jpg" alt="Child Learning" class="w-full h-full object-cover rounded-blob-alt">
-                    <i class="fa-solid fa-shapes absolute -bottom-6 -left-6 text-5xl text-accentRed animate-float"></i>
-                </div>
-            </div>
-            
-            <div class="flex-1 order-1 md:order-2">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">About Us</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 text-textDark leading-tight">Learn To Play, Converse With Confidence</h2>
-                <p class="text-textLight text-lg mb-8">
-                    We provide a creative environment where children feel encouraged to explore and express themselves confidently through interactive structured play.
+            <div class="flex-1">
+                <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">About Us</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6 text-brandDarkBlue leading-tight max-w-md">Learn To Play, Converse With Confidence</h2>
+                <p class="text-textLight mb-8 max-w-md">
+                    Give a spark off back at the fire all of a sudden going got a big basic needs. Everything grounded around us out.
                 </p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                <div class="grid grid-cols-2 gap-6 mb-10 max-w-md">
                     <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center text-sm shrink-0 mt-1">
-                            <i class="fa-solid fa-check"></i>
+                        <div class="w-10 h-10 rounded-full bg-brandOrange/10 text-brandOrange flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-volleyball"></i>
                         </div>
                         <div>
-                            <h4 class="font-heading font-bold mb-1 text-xl">Sport Program</h4>
-                            <p class="text-textLight m-0">Engaging physical activities</p>
+                            <h4 class="font-bold mb-1">Sport Program</h4>
+                            <p class="text-xs text-textLight">Magnam velit soluta, velique provident.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center text-sm shrink-0 mt-1">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-heading font-bold mb-1 text-xl">Easy To Learn</h4>
-                            <p class="text-textLight m-0">Simplified, joyous curriculum</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="inline-flex items-center gap-4 bg-white p-3 pr-6 rounded-full shadow-soft hover:shadow-hover transition-shadow">
-                    <img src="assets/img/founder.jpg" alt="Founder" class="w-14 h-14 rounded-full object-cover">
-                    <div>
-                        <strong class="block text-textDark font-heading">Call Us Now</strong>
-                        <p class="text-primary font-bold m-0 leading-none mt-1">+1 250 500 8192</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-24 bg-white relative">
-        <i class="fa-solid fa-rainbow absolute top-12 left-10 text-6xl text-warmNeutral opacity-20 hidden md:block animate-float"></i>
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Our Policies</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">The Best Playschool<br>For Your Kid</h2>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="flex-1 w-full relative">
-                    <img src="assets/img/graduation.jpg" alt="Graduation" class="w-full rounded-3xl shadow-soft">
-                    <i class="fa-solid fa-rocket absolute -right-6 -top-6 text-5xl text-softBlue animate-bounce-slow hidden sm:block"></i>
-                </div>
-                
-                <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
-                    <div class="flex gap-4 bg-cream p-5 rounded-2xl hover:shadow-soft transition-shadow">
-                        <div class="w-14 h-14 bg-[#FFF0E5] text-primary rounded-blob-img flex items-center justify-center text-xl shrink-0">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-heading font-bold text-lg mb-2 leading-tight">Teacher Training And Progress</h4>
-                            <p class="text-textLight text-sm m-0">Ensuring our educators remain updated</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 bg-cream p-5 rounded-2xl hover:shadow-soft transition-shadow">
-                        <div class="w-14 h-14 bg-[#E6F3FA] text-softBlue rounded-blob-img flex items-center justify-center text-xl shrink-0">
-                            <i class="fa-solid fa-user-nurse"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-heading font-bold text-lg mb-2 leading-tight">Nursing Detective 24/7</h4>
-                            <p class="text-textLight text-sm m-0">Full-time care and health monitoring</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 bg-cream p-5 rounded-2xl hover:shadow-soft transition-shadow">
-                        <div class="w-14 h-14 bg-[#EAF2F4] text-accentTeal rounded-blob-img flex items-center justify-center text-xl shrink-0">
+                        <div class="w-10 h-10 rounded-full bg-brandOrange/10 text-brandOrange flex items-center justify-center shrink-0">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
                         <div>
-                            <h4 class="font-heading font-bold text-lg mb-2 leading-tight">Advanced Playtime In Courses</h4>
-                            <p class="text-textLight text-sm m-0">Interactive and advanced early education</p>
+                            <h4 class="font-bold mb-1">Easy To Learn</h4>
+                            <p class="text-xs text-textLight">Magnam velit soluta, velique provident.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4 bg-cream p-5 rounded-2xl hover:shadow-soft transition-shadow">
-                        <div class="w-14 h-14 bg-[#FDECEC] text-accentRed rounded-blob-img flex items-center justify-center text-xl shrink-0">
-                            <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="flex items-center gap-6 border-t border-gray-200 pt-8 max-w-md relative">
+                    <div class="flex items-center gap-4 bg-white p-3 pr-8 rounded-full shadow-md">
+                        <img src="assets/img/founder.jpg" alt="Hannah McDonald" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <strong class="block text-sm">Hannah McDonald</strong>
+                            <span class="text-xs text-textLight">Founder</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full bg-brandOrange text-white flex items-center justify-center">
+                            <i class="fa-solid fa-phone"></i>
                         </div>
                         <div>
-                            <h4 class="font-heading font-bold text-lg mb-2 leading-tight">Self-Confidence Gifted Programs</h4>
-                            <p class="text-textLight text-sm m-0">Holistic personality development</p>
+                            <span class="text-xs text-textLight block">Call Us Now</span>
+                            <strong class="text-sm">+1 250 500 8192</strong>
                         </div>
                     </div>
+                    <!-- Cute giraffe illustration would naturally be absolutely positioned here -->
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=giraffe&backgroundColor=transparent" alt="Giraffe" class="absolute -right-20 -top-20 w-32 h-32 opacity-80 mix-blend-multiply hidden lg:block">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section class="py-24 bg-cream relative" id="programs">
-        <i class="fa-solid fa-puzzle-piece absolute bottom-12 right-10 text-6xl text-primary opacity-10 hidden md:block animate-float-delayed"></i>
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="text-center mb-16">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Our Programs</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">We Meet Kids At Their Level<br>Regardless Of Their Age</h2>
-            </div>
+    <!-- Why Choose Us / Policies -->
+    <section class="py-14 bg-[#F2F8FB] relative">
+        <!-- Cloud Divider Top -->
+        <div class="absolute -top-[50px] left-0 w-full h-[80px] w-full" style="background-image: url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 1200 120\' xmlns=\'http://www.w3.org/2000/svg\' preserveAspectRatio=\'none\'><path d=\'M0,60 C100,-20 200,80 300,30 C400,-20 500,80 600,0 C700,80 800,-20 900,40 C1000,-10 1100,70 1200,0 L1200,120 L0,120 Z\' fill=\'%23F2F8FB\'/></svg>'); background-size: cover; background-repeat: no-repeat;"></div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Program 1 -->
-                <div class="bg-accentTeal rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:rotate-12 transition-transform">
-                        <i class="fa-solid fa-baby"></i>
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-8 relative z-10">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Our Policies</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">The Best Playschool<br>For Your Kid</h2>
+            
+            <i class="fa-solid fa-rainbow absolute left-10 top-0 text-7xl text-gray-200/50 -z-10 -rotate-12"></i>
+            <i class="fa-solid fa-planet-ringed absolute right-10 top-0 text-7xl text-gray-200/50 -z-10 rotate-12"></i>
+        </div>
+
+        <div class="max-w-[1100px] mx-auto px-5 flex flex-col lg:flex-row items-center justify-between gap-10 mt-6">
+            <!-- Left Policies -->
+            <div class="flex-1 space-y-12 w-full">
+                <div class="flex gap-5 text-left items-start group">
+                    <div class="w-16 h-16 bg-orange-100 text-brandOrange rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-brandOrange group-hover:text-white transition-colors shadow-sm">
+                        <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">1.5 - 2.5 years</p>
-                    <p class="text-sm opacity-90 mb-8">Gentle introduction to structure</p>
-                    <a href="pre-nursery.php" class="inline-flex w-12 h-12 bg-white text-accentTeal rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl mb-2">Teacher Training And Progress</h4>
+                        <p class="text-sm text-textLight">Advancing skill levels to open learners back to real life, natural logic rules as outlines.</p>
+                    </div>
                 </div>
-                <!-- Program 2 -->
-                <div class="bg-primary rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:-rotate-12 transition-transform">
-                        <i class="fa-solid fa-child"></i>
+                <div class="flex gap-5 text-left items-start group">
+                    <div class="w-16 h-16 bg-blue-100 text-brandBlue rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-brandBlue group-hover:text-white transition-colors shadow-sm">
+                        <i class="fa-solid fa-stethoscope"></i>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">2.5 - 3.5 years</p>
-                    <p class="text-sm opacity-90 mb-8">Building language & motor skills</p>
-                    <a href="nursery.php" class="inline-flex w-12 h-12 bg-white text-primary rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-                <!-- Program 3 -->
-                <div class="bg-softBlue rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:rotate-12 transition-transform">
-                        <i class="fa-solid fa-pencil"></i>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl mb-2">Nursing Detective 24/7</h4>
+                        <p class="text-sm text-textLight">Advancing skill levels to open learners back to real life, natural logic rules as outlines.</p>
                     </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">3.5 - 4.5 years</p>
-                    <p class="text-sm opacity-90 mb-8">Letters, numbers & creativity</p>
-                    <a href="lkg.php" class="inline-flex w-12 h-12 bg-white text-softBlue rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-                <!-- Program 4 -->
-                <div class="bg-accentRed rounded-[40px] p-10 text-center text-white group hover:-translate-y-3 transition-transform duration-300 relative overflow-hidden shadow-soft">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-20 h-20 bg-white/20 rounded-blob mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm group-hover:-rotate-12 transition-transform">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
-                    <p class="bg-white/20 inline-block px-3 py-1 rounded-full text-sm font-semibold mb-4">4.5 - 6 years</p>
-                    <p class="text-sm opacity-90 mb-8">School readiness & preparation</p>
-                    <a href="ukg.php" class="inline-flex w-12 h-12 bg-white text-accentRed rounded-full items-center justify-center hover:bg-textDark hover:text-white transition-colors relative z-10 shadow-soft">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
                 </div>
             </div>
             
+            <!-- Center Image -->
+            <div class="w-full max-w-[300px] mx-auto relative hidden lg:block">
+                <div class="absolute inset-0 bg-white rounded-t-full shadow-xl mt-16 scale-[1.15] -z-10"></div>
+                <img src="assets/img/graduation.jpg" alt="Graduate" class="w-[280px] h-[350px] object-cover rounded-full mx-auto shadow-md border-8 border-white border-b-0 rounded-b-none">
+            </div>
+            
+            <!-- Right Policies -->
+            <div class="flex-1 space-y-12 w-full">
+                <div class="flex gap-5 text-left items-start group">
+                    <div class="w-16 h-16 bg-teal-100 text-brandTeal rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-brandTeal group-hover:text-white transition-colors shadow-sm">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl mb-2">Advanced Playtime In Courses</h4>
+                        <p class="text-sm text-textLight">Advancing skill levels to open learners back to real life, natural logic rules as outlines.</p>
+                    </div>
+                </div>
+                <div class="flex gap-5 text-left items-start group">
+                    <div class="w-16 h-16 bg-red-100 text-brandRed rounded-2xl flex items-center justify-center text-2xl shrink-0 group-hover:bg-brandRed group-hover:text-white transition-colors shadow-sm">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading font-bold text-xl mb-2">Self-Confidence Gifted Programs</h4>
+                        <p class="text-sm text-textLight">Advancing skill levels to open learners back to real life, natural logic rules as outlines.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="py-20 bg-white overflow-hidden" id="gallery">
-        <div class="container mx-auto px-5 max-w-7xl text-center mb-12 relative z-10">
-            <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Gallery</span>
-            <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">Captured Moments</h2>
-        </div>
 
+    <!-- Programs -->
+    <section class="py-14 bg-white relative">
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-8">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Our Programs</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue mb-8">We Meet Kids At Their Level<br>Regardless Of Their Age</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                <!-- Program 1 Teal -->
+                <div class="bg-brandTeal rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner rotate-3">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Pre Nursery</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">1.5 - 2.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Gentle introduction to structure</p>
+                    <a href="pre-nursery.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandTeal rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Program 2 Orange -->
+                <div class="bg-brandOrange rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2 lg:mt-6">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner -rotate-3">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2">Nursery</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">2.5 - 3.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Building language & motor skills</p>
+                    <a href="nursery.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandOrange rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Program 3 Blue -->
+                <div class="bg-blue-600 rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner rotate-3">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2">LKG</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">3.5 - 4.5 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">Letters, numbers & creativity</p>
+                    <a href="lkg.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Program 4 Red -->
+                <div class="bg-brandRed rounded-[40px] p-8 pb-12 text-center text-white relative shadow-xl transform transition hover:-translate-y-2 lg:mt-6">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-6 backdrop-blur-sm shadow-inner -rotate-3">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold mb-2">UKG</h3>
+                    <p class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20">4.5 - 6 years</p>
+                    <p class="text-sm opacity-90 mb-10 leading-relaxed max-w-[200px] mx-auto">School readiness & preparation</p>
+                    <a href="ukg.php" class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-brandRed rounded-full flex items-center justify-center shadow-md font-bold hover:bg-brandDarkBlue hover:text-white transition">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Help Form (Dark block) -->
+    <section class="py-10 bg-white">
+        <div class="max-w-[1300px] mx-auto px-5">
+            <div class="bg-brandTeal rounded-[40px] flex flex-col md:flex-row overflow-hidden shadow-2xl relative">
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')] opacity-50 z-0"></div>
+                <div class="flex-1 p-12 lg:p-16 relative z-10 text-white">
+                    <h2 class="font-heading text-4xl mb-8">How May We Help<br>You?</h2>
+                    <form class="space-y-4 max-w-md">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full bg-teal-700/50 border border-teal-500/50 rounded-xl px-5 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white transition text-sm">
+                            <input type="email" placeholder="Your Email" class="w-full bg-teal-700/50 border border-teal-500/50 rounded-xl px-5 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white transition text-sm">
+                        </div>
+                        <input type="text" placeholder="Subject" class="w-full bg-teal-700/50 border border-teal-500/50 rounded-xl px-5 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white transition text-sm">
+                        <textarea placeholder="Your Message" rows="3" class="w-full bg-teal-700/50 border border-teal-500/50 rounded-xl px-5 py-3 text-white placeholder-white/70 focus:outline-none focus:border-white transition text-sm resize-none"></textarea>
+                        <button type="submit" class="bg-white text-brandTeal font-bold px-8 py-3 rounded-full hover:bg-brandOrange hover:text-white transition shadow-md shadow-brandTeal/50 text-sm">
+                            Send It <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="hidden md:flex w-[500px] bg-teal-800/30 items-end justify-center relative z-10 pt-6 px-4">
+                    <!-- Graduation boy inside blue block -->
+                    <img src="assets/img/graduation.jpg" alt="Student pointing" class="w-[420px] h-[460px] object-cover rounded-t-full border-8 border-white border-b-0 shadow-lg translate-y-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-10 bg-white">
+        <div class="max-w-[1000px] mx-auto px-5 text-center">
+            <h2 class="text-3xl font-heading font-bold text-brandDarkBlue mb-12">What Clients Say</h2>
+
+            <?php
+            $testimonials = [
+                ['quote' => 'Awesome preschool with lovely teachers who genuinely care about the kids. My child looks forward to going to school every single day. Safe and nurturing environment!', 'name' => 'Priya Sharma', 'role' => 'Mother of Ananya, 4 yrs'],
+                ['quote' => 'The play-based approach gave my shy son the confidence to make friends and express himself. We\'ve seen incredible growth in just 6 months. Highly recommended!', 'name' => 'Rajesh Mehta', 'role' => 'Father of Arjun, 3 yrs'],
+                ['quote' => 'As a parent, safety is my top priority. The CCTV, trained staff, and constant updates from teachers gave me complete peace of mind from day one.', 'name' => 'Sunita Patel', 'role' => 'Mother of Keya, 5 yrs'],
+                ['quote' => 'The teachers truly know each child by name and personality. My daughter\'s language development has been remarkable. So grateful for The Foundation!', 'name' => 'Amit Joshi', 'role' => 'Father of Riya, 4 yrs'],
+                ['quote' => 'Best decision we made for our child\'s early education. The curriculum is well-structured yet fun. The staff is always welcoming and professional.', 'name' => 'Neha Gupta', 'role' => 'Mother of Rohan, 3 yrs'],
+            ];
+            ?>
+
+            <div class="relative">
+                <!-- Prev Button -->
+                <button id="testi-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 w-11 h-11 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-brandDarkBlue hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all duration-300">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <!-- Next Button -->
+                <button id="testi-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 w-11 h-11 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-brandDarkBlue hover:bg-brandOrange hover:text-white hover:border-brandOrange transition-all duration-300">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+
+                <?php foreach($testimonials as $i => $t): ?>
+                <div class="testi-slide <?= $i === 0 ? '' : 'hidden' ?> bg-[#F2F8FB] rounded-[40px] p-10 md:p-16 relative shadow-sm border border-blue-50 transition-all duration-500">
+                    <i class="fa-solid fa-quote-left text-5xl text-brandBlue/20 absolute top-8 left-10"></i>
+                    <i class="fa-solid fa-quote-right text-5xl text-brandBlue/20 absolute bottom-12 right-10"></i>
+                    <p class="text-lg md:text-xl font-medium text-textMain/80 mb-8 max-w-2xl mx-auto leading-relaxed relative z-10 italic">
+                        "<?= htmlspecialchars($t['quote']) ?>"
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <img src="assets/img/google-review-image.png" alt="<?= htmlspecialchars($t['name']) ?>" class="w-16 h-16 rounded-full object-cover mb-3 shadow-md border-2 border-white">
+                        <h5 class="font-heading font-bold text-brandDarkBlue"><?= htmlspecialchars($t['name']) ?></h5>
+                        <p class="text-sm text-textLight"><?= htmlspecialchars($t['role']) ?></p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="flex justify-center gap-2 mt-6" id="testi-dots">
+                <?php foreach($testimonials as $i => $_): ?>
+                <button class="testi-dot w-2.5 h-2.5 rounded-full transition-all duration-300 <?= $i === 0 ? 'bg-brandOrange scale-125' : 'bg-gray-200' ?>" data-index="<?= $i ?>"></button>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function() {
+        var slides = document.querySelectorAll('.testi-slide');
+        var dots = document.querySelectorAll('.testi-dot');
+        var current = 0;
+        var timer;
+
+        function goTo(index) {
+            slides[current].classList.add('hidden');
+            dots[current].classList.remove('bg-brandOrange', 'scale-125');
+            dots[current].classList.add('bg-gray-200');
+            current = index;
+            slides[current].classList.remove('hidden');
+            dots[current].classList.add('bg-brandOrange', 'scale-125');
+            dots[current].classList.remove('bg-gray-200');
+        }
+
+        function next() { goTo((current + 1) % slides.length); }
+        function prev() { goTo((current - 1 + slides.length) % slides.length); }
+
+        function resetTimer() { clearInterval(timer); timer = setInterval(next, 4000); }
+
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goTo(parseInt(this.getAttribute('data-index')));
+                resetTimer();
+            });
+        });
+
+        document.getElementById('testi-prev').addEventListener('click', function() { prev(); resetTimer(); });
+        document.getElementById('testi-next').addEventListener('click', function() { next(); resetTimer(); });
+
+        timer = setInterval(next, 4000);
+    })();
+    </script>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="py-16 bg-brandBg relative z-10 overflow-hidden">
+        <!-- Optional top decor if needed -->
+        <i class="fa-solid fa-camera absolute left-10 top-16 text-6xl text-brandBlue/5 -rotate-12"></i>
+        <i class="fa-solid fa-image absolute right-10 bottom-24 text-6xl text-brandOrange/5 rotate-12"></i>
+
+        <div class="max-w-[1300px] mx-auto px-5 text-center mb-12 relative z-20">
+            <span class="text-brandOrange font-bold text-sm tracking-widest uppercase mb-4 block">Gallery</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-brandDarkBlue">Captured Moments</h2>
+        </div>
+        
         <style>
         .animate-scroll-gallery {
             animation: scroll-gallery 40s linear infinite;
@@ -269,152 +400,64 @@
         }
         </style>
 
-        <div class="w-full relative z-10 pb-4">
-            <div class="animate-scroll-gallery items-center">
-                <?php 
-                $gallery_images = [
-                    "IMG_20250814_105055_373.webp",
-                    "IMG_20250814_105326_276.webp",
-                    "IMG_20250814_105534_078.webp",
-                    "IMG_20250814_115028_061.webp",
-                    "IMG_20250814_115045_945.webp",
-                    "IMG_20250814_115103_087.webp",
-                    "IMG_20250814_115119_815.webp",
-                    "IMG_20250814_115128_872.webp"
-                ];
-                shuffle($gallery_images);
-                // Print them twice for the seamless loop
-                for($i=0; $i<2; $i++) {
-                    foreach($gallery_images as $index => $img) {
-                ?>
-                <div class="w-[280px] md:w-[320px] shrink-0 mr-6 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                    <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <?php 
+        <div class="w-full relative z-20">
+            <div class="overflow-hidden w-full pb-8 pt-4">
+                <div class="animate-scroll-gallery items-center">
+                    <?php 
+                    $gallery_images = [
+                        "IMG_20250814_105055_373.webp",
+                        "IMG_20250814_105326_276.webp",
+                        "IMG_20250814_105534_078.webp",
+                        "IMG_20250814_115028_061.webp",
+                        "IMG_20250814_115045_945.webp",
+                        "IMG_20250814_115103_087.webp",
+                        "IMG_20250814_115119_815.webp",
+                        "IMG_20250814_115128_872.webp"
+                    ];
+                    shuffle($gallery_images);
+                    // Print them twice for the seamless loop
+                    for($i=0; $i<2; $i++) {
+                        foreach($gallery_images as $index => $img) {
+                    ?>
+                    <div class="w-[280px] md:w-[350px] shrink-0 mr-6 rounded-[30px] overflow-hidden shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group relative cursor-pointer">
+                        <img src="assets/gallery/<?php echo $img; ?>" alt="Gallery Image" class="w-full h-56 md:h-72 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brandDarkBlue/0 group-hover:bg-brandDarkBlue/20 transition duration-300 flex items-center justify-center">
+                            <i class="fa-solid fa-camera text-white text-3xl opacity-0 group-hover:opacity-100 transition duration-300 transform scale-50 group-hover:scale-100"></i>
+                        </div>
+                    </div>
+                    <?php 
+                        }
                     }
+                    ?>
+                </div>
+            </div>
+            <script>
+            (function() {
+                var gallery = document.querySelector('.animate-scroll-gallery');
+                if (!gallery) return;
+                var items = Array.from(gallery.children);
+                var half = items.length / 2;
+                var originals = items.slice(0, half);
+                for (var i = originals.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
                 }
-                ?>
+                gallery.innerHTML = '';
+                originals.forEach(function(el) { gallery.appendChild(el); });
+                originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
+            })();
+            </script>
+
+            <div class="text-center mt-8 mb-8">
+                <a href="gallery.php" class="inline-flex items-center gap-2 font-bold text-brandDarkBlue hover:text-brandOrange transition relative group">
+                    <span class="border-b-2 border-transparent group-hover:border-brandOrange pb-0.5 transition-colors">View Full Gallery</span> 
+                    <span class="w-8 h-8 rounded-full bg-brandOrange text-white flex items-center justify-center shadow-md group-hover:translate-x-1 transition-transform">
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
             </div>
         </div>
-        <script>
-        (function() {
-            var gallery = document.querySelector('.animate-scroll-gallery');
-            if (!gallery) return;
-            var items = Array.from(gallery.children);
-            var half = items.length / 2;
-            var originals = items.slice(0, half);
-            for (var i = originals.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var t = originals[i]; originals[i] = originals[j]; originals[j] = t;
-            }
-            gallery.innerHTML = '';
-            originals.forEach(function(el) { gallery.appendChild(el); });
-            originals.forEach(function(el) { gallery.appendChild(el.cloneNode(true)); });
-        })();
-        </script>
+        
     </section>
-
-
-    <!-- Testimonials -->
-    <section class="py-24 bg-white relative">
-        <i class="fa-solid fa-music absolute top-20 right-20 text-5xl text-softBlue opacity-10 animate-float hidden md:block"></i>
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="text-center mb-12">
-                <span class="inline-block px-4 py-1.5 bg-[#FFF0E5] text-primary rounded-full font-heading font-bold text-sm mb-4">Testimonials</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark">What Clients Say</h2>
-            </div>
-            
-            <div class="max-w-4xl mx-auto bg-cream p-12 md:p-16 rounded-[40px] text-center shadow-soft relative mt-16">
-                <!-- Avatar overlapping top -->
-                <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full border-4 border-white shadow-soft bg-white">
-                    <img src="assets/img/parent.jpg" alt="Parent" class="w-full h-full rounded-full object-cover">
-                </div>
-                
-                <i class="fa-solid fa-quote-left text-6xl text-primary/20 block mb-6 mt-4"></i>
-                <p class="text-xl md:text-2xl font-body italic text-textDark mb-10 leading-relaxed">
-                    "The playschool provides such a nurturing and vibrant environment. Our child has developed immense confidence and foundational skills. The teachers are exceptional and truly care! We couldn't be happier with our choice."
-                </p>
-                <div>
-                    <strong class="block text-xl font-heading text-textDark">Sarah Johnson</strong>
-                    <span class="text-primary font-semibold">Happy Parent</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-24 bg-cream" id="contact">
-        <div class="container mx-auto px-5 max-w-7xl">
-            <div class="flex flex-col lg:flex-row gap-16">
-                <div class="flex-1">
-                    <span class="inline-block px-4 py-1.5 bg-[#EAF2F4] text-accentTeal rounded-full font-heading font-bold text-sm mb-4">Contact Us</span>
-                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-textDark mb-8 leading-tight">Let's Talk About Your<br>Child's Future</h2>
-                    <p class="text-textLight mb-12">We are here to answer any questions you may have about our curriculum, enrollment process, or facilities. Feel free to reach out.</p>
-                    
-                    <div class="space-y-8">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-xl mb-1">Our Location</h4>
-                                <p class="text-textLight m-0">1st floor, Ramsons Kshitiji Commercial, Sector 95, Gurugram, Haryana 122505</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-xl mb-1">Phone Number</h4>
-                                <p class="text-textLight m-0">+91 87663 37686</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-white text-primary rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading font-bold text-xl mb-1">Email Address</h4>
-                                <p class="text-textLight m-0">playschoolthefoundation@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex-1">
-                    <div class="bg-white p-10 md:p-12 rounded-[40px] shadow-hover border border-gray-100 relative">
-                        <!-- Decorative element on form -->
-                        <div class="absolute -right-6 -top-6 w-20 h-20 bg-primary/10 rounded-blob -z-10 animate-blobMorph"></div>
-                        <h3 class="font-heading text-3xl font-bold mb-8 text-center">Enrollment Inquiry</h3>
-                        <form action="#" method="POST">
-                            <div class="mb-6">
-                                <input type="text" placeholder="Parent's Name" required class="w-full px-6 py-4 bg-cream border-2 border-transparent rounded-2xl focus:outline-none focus:border-primary transition-colors text-textDark">
-                            </div>
-                            <div class="mb-6">
-                                <input type="email" placeholder="Email Address" required class="w-full px-6 py-4 bg-cream border-2 border-transparent rounded-2xl focus:outline-none focus:border-primary transition-colors text-textDark">
-                            </div>
-                            <div class="mb-6">
-                                <select class="w-full px-6 py-4 bg-cream border-2 border-transparent rounded-2xl focus:outline-none focus:border-primary transition-colors text-textLight appearance-none">
-                                    <option value="" disabled selected>Select Program of Interest</option>
-                                    <option value="pre-nursery">Pre Nursery (1.5 - 2.5 Yrs)</option>
-                                    <option value="nursery">Nursery (2.5 - 3.5 Yrs)</option>
-                                    <option value="lkg">LKG (3.5 - 4.5 Yrs)</option>
-                                    <option value="ukg">UKG (4.5 - 6 Yrs)</option>
-                                </select>
-                            </div>
-                            <div class="mb-8">
-                                <textarea placeholder="Message or Questions" rows="4" class="w-full px-6 py-4 bg-cream border-2 border-transparent rounded-2xl focus:outline-none focus:border-primary transition-colors text-textDark resize-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-primary text-white font-heading font-bold text-lg py-4 px-8 rounded-full shadow-btn hover:bg-primaryHover hover:-translate-y-1 hover:shadow-btn-hover transition-all duration-300">
-                                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 <?php include 'footer.php'; ?>

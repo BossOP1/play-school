@@ -17,7 +17,7 @@ if (!is_dir($distDir)) {
 // Files to build
 $pages = [
     'index.php',
-    'index2.php',
+    'index.php',
     'about.php',
     'contact.php',
     'pre-nursery.php',

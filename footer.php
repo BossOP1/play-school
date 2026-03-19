@@ -2,9 +2,8 @@
     <footer class="bg-brandBg pt-10 pb-10 relative">
         <div class="max-w-[1300px] mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-200 pb-12 mb-8">
             <div class="pr-6">
-                <div class="flex items-center gap-2 font-heading text-2xl font-bold text-textMain mb-6">
-                    <i class="fa-solid fa-child-reaching text-brandOrange text-3xl"></i>
-                    The Foundation
+                <div class="mb-6">
+                    <img src="assets/img/Play_school_logo-removebg-preview (1).png" alt="The Foundation Play School" class="h-16 w-auto object-contain">
                 </div>
                 <p class="text-sm text-textLight mb-6">Building strong foundations for lifelong learning, social skills, and emotional well-being since 2010.</p>
             </div>
@@ -12,20 +11,20 @@
             <div>
                 <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Quick Links</h4>
                 <ul class="space-y-3 text-sm text-textLight font-medium">
-                    <li><a href="index2.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Home</a></li>
+                    <li><a href="index.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Home</a></li>
                     <li><a href="about.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> About Us</a></li>
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Programs</a></li>
+                    <li><a href="gallery.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Gallery</a></li>
                     <li><a href="contact.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Contact Us</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Categories</h4>
+                <h4 class="font-heading font-bold text-brandDarkBlue text-lg mb-6">Programs</h4>
                 <ul class="space-y-3 text-sm text-textLight font-medium">
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool</a></li>
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten</a></li>
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Kindergarten 2</a></li>
-                    <li><a href="#" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Preschool 2</a></li>
+                    <li><a href="pre-nursery.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Pre Nursery</a></li>
+                    <li><a href="nursery.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> Nursery</a></li>
+                    <li><a href="lkg.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> LKG</a></li>
+                    <li><a href="ukg.php" class="hover:text-brandOrange flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-brandOrange"></i> UKG</a></li>
                 </ul>
             </div>
 
