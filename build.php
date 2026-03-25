@@ -24,7 +24,8 @@ $pages = [
     'nursery.php',
     'lkg.php',
     'ukg.php',
-    'gallery.php'
+    'gallery.php',
+    'thankyou.php'
 ];
 
 foreach ($pages as $page) {
@@ -44,6 +45,9 @@ foreach ($pages as $page) {
         // Change links from .php to .html in the generated content
         // This regex handles both single and double quotes around the href value
         $htmlContent = preg_replace('/href=(["\'])([^"\']+)\.php\1/', 'href=$1$2.html$1', $htmlContent);
+
+        // Also update form hidden input values that reference .php files
+        $htmlContent = preg_replace('/value=(["\'])([^"\']+)\.php\1/', 'value=$1$2.html$1', $htmlContent);
         
         // Save the HTML to the dist folder (change extension to .html)
         $outputFile = $distDir . '/' . str_replace('.php', '.html', $page);
