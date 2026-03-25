@@ -17,7 +17,6 @@ if (!is_dir($distDir)) {
 // Files to build
 $pages = [
     'index.php',
-    'index.php',
     'about.php',
     'contact.php',
     'pre-nursery.php',
@@ -90,11 +89,10 @@ if (file_exists($sourceDir . '/style.css')) {
     echo "Copied style.css.\n";
 }
 
-// Create a netlify_redirects file (optional, just to map / to /index2.html if they want index2 as main)
-// In this case we'll deploy dist/index2.html, but if index2 is the main homepage, we should copy index2.html to index.html
+// Remove stale index2.html if it exists
 if (file_exists($distDir . '/index2.html')) {
-    copy($distDir . '/index2.html', $distDir . '/index.html');
-    echo "Copied index2.html to index.html (Default Homepage).\n";
+    unlink($distDir . '/index2.html');
+    echo "Removed stale index2.html.\n";
 }
 
 echo "\nBuild complete! The /dist folder is ready to deploy to Netlify.\n";
